@@ -28,6 +28,7 @@ class _AiStudioScreenState extends State<AiStudioScreen> {
   bool _loading = true;
 
   static const _toolMeta = {
+    'song_gen': ('Create Song', 'Prompt se poora song banao', Icons.auto_awesome),
     'karaoke': ('Karaoke', 'Remove vocals to sing along', Icons.mic_none),
     'master': ('Mastering', 'Studio loudness & polish', Icons.graphic_eq),
     'lyrics': ('Lyrics Sync', 'Auto timecode LRC file', Icons.subtitles),
@@ -76,7 +77,7 @@ class _AiStudioScreenState extends State<AiStudioScreen> {
     setState(() => _results = out.take(15).toList());
   }
 
-  Future<void> _submit(String type, {String? prompt}) async {
+  Future<void> _submit(String type, {String? prompt, String? title, bool? instrumental, int? seconds}) async {
     final messenger = ScaffoldMessenger.of(context);
     final data = <String, String>{'action': 'submit', 'type': type};
     if (_selected != null) {
@@ -86,6 +87,9 @@ class _AiStudioScreenState extends State<AiStudioScreen> {
       data['track_hash'] = '${_selected!['hash'] ?? _selected!['ID']}';
     }
     if (prompt != null && prompt.isNotEmpty) data['prompt'] = prompt;
+    if (title != null && title.isNotEmpty) data['title'] = title;
+    if (instrumental == true) data['instrumental'] = '1';
+    if (seconds != null) data['seconds'] = '$seconds';
     final res = await _api.postPayloadRaw(endpoint: 'ai_studio', data: data);
     if (!mounted) return;
     if (res.isSuccess && res.data?['job'] is Map) {
@@ -111,6 +115,49 @@ class _AiStudioScreenState extends State<AiStudioScreen> {
       ),
     );
     if (p != null) _submit('cover_art', prompt: p);
+  }
+
+  Future<void> _songPrompt() async {
+    final pCtrl = TextEditingController();
+    final tCtrl = TextEditingController();
+    var instrumental = false;
+    final res = await showDialog<Map<String, dynamic>>(
+      context: context,
+      builder: (c) => StatefulBuilder(
+        builder: (c, setD) => AlertDialog(
+          title: const Text('Create a song with AI'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextField(
+                controller: pCtrl,
+                maxLines: 3,
+                decoration: const InputDecoration(hintText: 'Describe your song — genre, mood, vocals...'),
+              ),
+              const SizedBox(height: 10),
+              TextField(controller: tCtrl, decoration: const InputDecoration(hintText: 'Title (optional)')),
+              SwitchListTile(
+                dense: true,
+                contentPadding: EdgeInsets.zero,
+                title: const Text('Instrumental only'),
+                value: instrumental,
+                onChanged: (v) => setD(() => instrumental = v),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(c), child: const Text('Cancel')),
+            FilledButton(
+              onPressed: () => Navigator.pop(c, {'prompt': pCtrl.text.trim(), 'title': tCtrl.text.trim(), 'instrumental': instrumental}),
+              child: const Text('Create'),
+            ),
+          ],
+        ),
+      ),
+    );
+    if (res != null && (res['prompt'] as String).isNotEmpty) {
+      _submit('song_gen', prompt: res['prompt'], title: res['title'], instrumental: res['instrumental'] as bool, seconds: 45);
+    }
   }
 
   @override
@@ -174,20 +221,28 @@ class _AiStudioScreenState extends State<AiStudioScreen> {
   Widget _toolTile(ThemeData theme, String key, String title, String sub, IconData icon) {
     final t = _tools[key];
     final enabled = t is Map && t['enabled'] == true;
-    final needsTrack = key != 'cover_art';
+    final allowed = t is! Map || t['allowed'] != false;
+    final needsTrack = key != 'cover_art' && key != 'song_gen';
+    final note = !enabled
+        ? 'Disabled by admin'
+        : (!allowed ? 'Not in your plan — upgrade' : sub);
     return Card(
       child: ListTile(
-        leading: Icon(icon, color: enabled ? theme.colorScheme.primary : theme.disabledColor),
+        leading: Icon(icon, color: (enabled && allowed) ? theme.colorScheme.primary : theme.disabledColor),
         title: Text(title),
-        subtitle: Text(enabled ? sub : 'Disabled by admin'),
-        trailing: enabled
+        subtitle: Text(note),
+        trailing: (enabled && allowed)
             ? FilledButton.tonal(
                 onPressed: needsTrack && _selected == null
                     ? null
-                    : () => key == 'cover_art' ? _coverPrompt() : _submit(key),
+                    : () {
+                        if (key == 'cover_art') _coverPrompt();
+                        else if (key == 'song_gen') _songPrompt();
+                        else _submit(key);
+                      },
                 child: const Text('Run'),
               )
-            : null,
+            : (!allowed ? const Icon(Icons.lock_outline, size: 18) : null),
       ),
     );
   }
