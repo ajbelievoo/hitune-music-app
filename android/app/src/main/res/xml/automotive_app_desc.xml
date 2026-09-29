@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Declares the app supports Android Automotive / Android Auto media
+     features. The media browser comes from the audio_service
+     MediaBrowserService already declared in AndroidManifest.xml. -->
+<automotiveApp>
+    <uses name="media"/>
+</automotiveApp>

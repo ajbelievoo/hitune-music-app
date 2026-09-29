@@ -1,0 +1,1532 @@
+Launching lib\main.dart on V2158 in debug mode...
+Running Gradle task 'assembleDebug'...                          
+I/flutter ( 4778): [PROFILE] _load() - sessId: SET, sessKey: SET, _hasSession: true
+I/flutter ( 4778): [PROFILE] _load() - cached name: ANMOL SAUDA, avatar: SET, cover: SET
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST bofClient/single/page/?slug=home
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [PROFILE] _onConfigChanged() - ClientConfigService notified, mounted=true
+I/flutter ( 4778): [PROFILE] _load() - client_config success
+I/flutter ( 4778): [PROFILE] _load() - fetching user profile...
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - calling UserEditService...
+I/flutter ( 4778): [PROFILE] _load() - sessId: SET, sessKey: SET, _hasSession: true
+I/flutter ( 4778): [PROFILE] _onConfigChanged() - ClientConfigService notified, mounted=true
+I/flutter ( 4778): [APP SHELL] fetchClientConfig done, now fetching social logins...
+I/flutter ( 4778): [SOCIAL LOGIN] Fetching social login providers...
+I/flutter ( 4778): [PROFILE] _load() - sessId: SET, sessKey: SET, _hasSession: true
+I/flutter ( 4778): [PROFILE] _load() - cached name: ANMOL SAUDA, avatar: SET, cover: SET
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [PROFILE] _load() - cached name: ANMOL SAUDA, avatar: SET, cover: SET
+I/flutter ( 4778): [API] POST user/login_social_get
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] user/login_social_get (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "sls": [
+I/flutter ( 4778):         {
+I/flutter ( 4778):             "id": "google",
+I/flutter ( 4778):             "title": "Google",
+I/flutter ( 4778):             "icon": "google"
+I/flutter ( 4778):         },
+I/flutter ( 4778):         {
+I/flutter ( 4778):             "id": "spotify",
+I/flutter ( 4778):             "title": "Spotify",
+I/flutter ( 4778):             "icon": "spotify"
+I/flutter ( 4778):         }
+I/flutter ( 4778):     ],
+I/flutter ( 4778):     "google_off": "1",
+I/flutter ( 4778):     "success": true,
+I/flutter ( 4778):     "messages": [
+I/flutter ( 4778):         "ok"
+I/flutter ( 4778):     ]
+I/flutter ( 4778): }
+I/flutter ( 4778): ----- [API BODY END] user/login_social_get (200) -----
+I/flutter ( 4778): [API] user/login_social_get -> 200 success=true
+I/flutter ( 4778): [SOCIAL LOGIN] Response: success=true, data={sls: [{id: google, title: Google, icon: google}, {id: spotify, title: Spotify, icon: spotify}], google_off: 1, success: true, messages: [ok]}
+I/flutter ( 4778): [SOCIAL LOGIN] sls data: [{id: google, title: Google, icon: google}, {id: spotify, title: Spotify, icon: spotify}]
+I/flutter ( 4778): [SOCIAL LOGIN] Loaded 2 providers from API
+I/flutter ( 4778): [PROFILE] _onConfigChanged() - ClientConfigService notified, mounted=true
+I/flutter ( 4778): [APP SHELL] fetchSocialLogins done
+I/flutter ( 4778): [PROFILE] _load() - sessId: SET, sessKey: SET, _hasSession: true
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - result: isSuccess=true, error=null
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - data keys: (tab, bofForm, user, seo, tabs, success, messages)
+I/flutter ( 4778): [PROFILE] FULL DATA: {"tab":"profile","bofForm":{"ID":"profile","inputs":{"name":{"label":"Name<span class='_rm'>*</span>","tip":null,"input":{"type":"text","name":"name","value":"ANMOL SAUDA"},"bofInput":null,"validator":null,"display_on":null,"group":null},"avatar_id":{"label":"Avatar","tip":"Acceotable extensions: <b>jpg</b>, <b>gif</b>, <b>png</b>, <b>jpeg</b><br>Acceotable file size: min: <b>0.01MB</b>. max: <b>10MB</b><br>Acceptable image dimensions: min: <b>100*50px</b>. max: <b>2000*1500px</b>","input":{"name":"avatar_id","type":"bof_file","value":79,"bof_file_pass":"2c74d8f7c3","bof_file_type":"image","bof_file_object_type":"user_avatar","preview":"https://music.hitune.in/files/user_avatar/26/03/19/69bbfd825d7ac/69bbfd825e3db.webp","accept":".jpg,.gif,.png,.jpeg","chunk":"yes","chunk_size":"1","max_files":1,"cap":"jpeg_20260319_191320_2336392710664030879"},"bofInput":null,"validator":null,"display_on":null,"group":null},"bg_img_id":{"label":"Cover","tip":"Used on top of your profile as background im
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] bofClient/single/page/?slug=home (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "data": {
+I/flutter ( 4778):         "hash": "b95991150a4a548584d7b1ce9aed3398",
+I/flutter ( 4778):         "name": "home",
+I/flutter ( 4778):         "class": "",
+I/flutter ( 4778):         "pre_design": "bigslider",
+I/flutter ( 4778):         "s_widgets": 16,
+I/flutter ( 4778):         "time_add": "2026-03-15 10:04:13",
+I/flutter ( 4778):         "url": "\/home",
+I/flutter ( 4778):         "ot": "page"
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "page": {
+I/flutter ( 4778):         "classes": "_cd_bigslider fw_container page_name_home unpurchasable"
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "widgets": [
+I/flutter ( 4778):         {
+I/flutter ( 4778):             "ID": "295ac5255f",
+I/flutter ( 4778):             "i": "1",
+I/flutter ( 4778):             "display": {
+I/flutter ( 4778):                 "type": "grid",
+I/flutter ( 4778):                 "title": null,
+I/flutter ( 4778):                 "sub_data": null,
+I/flutter ( 4778):                 "link": null,
+I/flutter ( 4778):                 "pagination": null,
+I/flutter ( 4778):                 "bg_img": null,
+I/flutter ( 4778):                 "slider_size": null,
+I/flutter ( 4778):                 "slider_mason": false,
+I/flutter ( 4778):                 "slider_rows": null,
+I/flutter ( 4778):                 "list_columns": null,
+I/flutter ( 4778):                 "table_columns": null,
+I/flutter ( 4778):                 "table_labels": null,
+I/flutter ( 4778):                 "grid_cols": "4_4_4",
+I/flutter ( 4778):                 "grid_fitMain": true,
+I/flutter ( 4778):                 "widgets": [
+I/flutter ( 4778):                     {
+I/flutter ( 4778): ----- [API BODY END] bofClient/single/page/?slug=home (200) -----
+I/flutter ( 4778): [API] bofClient/single/page/?slug=home -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - bofForm type: _Map<String, dynamic>
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - inputs type: _Map<String, dynamic>
+I/flutter ( 4778): [PROFILE] ALL INPUT KEYS: [name, avatar_id, bg_img_id]
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - nameInput type: _Map<String, dynamic>
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - inputObj type: _Map<String, dynamic>
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - extracted name: ANMOL SAUDA
+I/flutter ( 4778): [PROFILE] _load() - cached name: ANMOL SAUDA, avatar: SET, cover: SET
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - _userName set to: ANMOL SAUDA
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - avatarInput: {label: Avatar, tip: Acceotable extensions: <b>jpg</b>, <b>gif</b>, <b>png</b>, <b>jpeg</b><br>Acceotable file size: min: <b>0.01MB</b>. max: <b>10MB</b><br>Acceptable image dimensions: min: <b>100*50px</b>. max: <b>2000*1500px</b>, input: {name: avatar_id, type: bof_file, value: 79, bof_file_pass: 2c74d8f7c3, bof_file_type: image, bof_file_object_type: user_avatar, preview: https://music.hitune.in/files/user_avatar/26/03/19/69bbfd825d7ac/69bbfd825e3db.webp, accept: .jpg,.gif,.png,.jpeg, chunk: yes, chunk_size: 1, max_files: 1, cap: jpeg_20260319_191320_2336392710664030879}, bofInput: null, validator: null, display_on: null, group: null}
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - avatarId from inputs: 79
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - _userAvatar set from inputs to: https://music.hitune.in/files/79
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - setState called after avatar_id update
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - bof_file_pass: null
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - checking messages...
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - user object: {ID: 7, username: anmolsauda, name: ANMOL SAUDA, email: rajbisvashup24@gmail.com, avatar: {ID: 79, pass: 2c74d8f7c3, type: image, host_id: 1, dest_host_id: 0, user_id: 0, path: files/user_avatar/26/03/19/69bbfd825d7ac/jpeg_20260319_191320_2336392710664030879.jpg, name: jpeg_20260319_191320_2336392710664030879, extension: jpg, mime_type: image/jpeg, data: {"total_size":601130,"width":1125,"height":1500,"size":146829,"dominant_color":{"hex":"a7999b","rgb":"167, 153, 155"},"_sisters":{"webp":{"name":"69bbfd825e030","path":"files\/user_avatar\/26\/03\/19\/69bbfd825d7ac\/69bbfd825e030.webp","size":146829,"width":1125,"height":1500,"webp":true},"1200":{"name":"69bbfd825e0bb","path":"files\/user_avatar\/26\/03\/19\/69bbfd825d7ac\/69bbfd825e0bb.jpg","size":110695,"width":900,"height":1200},"1200_webp":{"name":"69bbfd825e126","path":"files\/user_avatar\/26\/03\/19\/69bbfd825d7ac\/69bbfd825e126.webp","size":110695,"width":900,"height":1200,"webp":true},"500":{"name":"69bbfd
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+Running Gradle task 'assembleDebug'...                              4.0s
+ΓêÜ Built build\app\outputs\flutter-apk\app-debug.apk
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - user keys: [ID, username, name, email, avatar, avatar_url, cover, cover_url]
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - setState called after user data update
+I/flutter ( 4778): [PROFILE] _fetchUserProfile() - END: _userName=ANMOL SAUDA, _userAvatar=https://music.hitune.in/files/79
+I/flutter ( 4778): [HOME] Home API raw response type: _Map<String, dynamic>
+I/flutter ( 4778): [HOME] Home API response keys: (data, page, widgets, seo, success, messages)
+I/flutter ( 4778): [HOME] widgets type: List<dynamic>, length: 10
+I/flutter ( 4778): Home raw data: {data: {hash: b95991150a4a548584d7b1ce9aed3398, name: home, class: , pre_design: bigslider, s_widgets: 16, time_add: 2026-03-15 10:04:13, url: /home, ot: page}, page: {classes: _cd_bigslider fw_container page_name_home unpurchasable}, widgets: [{ID: 295ac5255f, i: 1, display: {type: grid, title: null, sub_data: null, link: null, pagination: null, bg_img: null, slider_size: null, slider_mason: false, slider_rows: null, list_columns: null, table_columns: null, table_labels: null, grid_cols: 4_4_4, grid_fitMain: true, widgets: [{ID: b98c8e5a2a, i: 295ac5255f_0, display: {type: html, title: , sub_data: , link: null, pagination: null, bg_img: <div class="color_bg dimmer radial_med_high"></div><img src='https://images.unsplash.com/photo-1537730748877-5d8fcd41a7ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'>, slider_size: null, slider_mason: false, slider_rows: null, list_columns: null, table_columns: null, table_labels: null, classes: type_cta c
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [HOME] Building from payload keys: (data, page, widgets, seo, success, messages)
+I/flutter ( 4778): [HOME] Widgets is List with 10 items
+I/flutter ( 4778): [HOME] Total widgets to render: 10
+I/flutter ( 4778): [HOME] Widget 0: type=grid
+I/flutter ( 4778): [HOME] Widget 1: type=slider
+I/flutter ( 4778): [HOME] Widget 2: type=slider
+I/flutter ( 4778): [HOME] Widget 3: type=slider
+I/flutter ( 4778): [HOME] Widget 4: type=slider
+I/flutter ( 4778): [HOME] Widget 5: type=slider
+I/flutter ( 4778): [HOME] Widget 6: type=slider
+I/flutter ( 4778): [HOME] Widget 7: type=html
+I/flutter ( 4778): [HOME] Widget 8: type=grid
+I/flutter ( 4778): [HOME] Widget 9: type=slider
+I/flutter ( 4778): Building widget section: {ID: 295ac5255f, i: 1, display: {type: grid, title: null, sub_data: null, link: null, pagination: null, bg_img: null, slider_size: null, slider_mason: false, slider_rows: null, list_columns: null, table_columns: null, table_labels: null, grid_cols: 4_4_4, grid_fitMain: true, widgets: [{ID: b98c8e5a2a, i: 295ac5255f_0, display: {type: html, title: , sub_data: , link: null, pagination: null, bg_img: <div class="color_bg dimmer radial_med_high"></div><img src='https://images.unsplash.com/photo-1537730748877-5d8fcd41a7ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'>, slider_size: null, slider_mason: false, slider_rows: null, list_columns: null, table_columns: null, table_labels: null, classes: type_cta c_o_type_page zero_items has_title has_bg_img has_sub_data full_vh font_size_vlarge img_place_right no_img no_bg_color bg_dimmed, html: <div class='text_wrapper'><div class='title'>Music Without Limits</div><div class='sub_title'>Access
+I/flutter ( 4778): Widget type: grid, title: null
+I/flutter ( 4778): Building widget section: {ID: 72dba7f2cd, i: 2, display: {type: slider, title: Trending Now, sub_data: Listen to the most popular tracks this week., link: list/72dba7f2cd, pagination: true, bg_img: null, slider_size: medium, slider_mason: false, slider_rows: 1, list_columns: null, table_columns: null, table_labels: null, o_type: m_track, classes: type_slider c_o_type_page o_type_m_track has_title no_bg_img size_medium rows_1 liquid linked has_sub_data i1}, items: {1: [{title: Fazeeta, sub_data: ROHITAK ROCK, sub_link: music/artist/rohitak_rock, cover: <picture><source srcset="https://i.scdn.co/image/ab67616d0000b273bb48fe873a6f095a6b0adf54" type="image/jpeg" media="(min-width: 1344px)" ><source srcset="https://i.scdn.co/image/ab67616d00001e02bb48fe873a6f095a6b0adf54" type="image/jpeg" media="(min-width: 630px)" ><img src="https://i.scdn.co/image/ab67616d00004851bb48fe873a6f095a6b0adf54" alt="" loading="lazy" ></picture>, ot: m_track, price_hr: Free, price: 0, id: 69bca4f541c51, url: music/track/rohitak_rock-
+I/flutter ( 4778): Widget type: slider, title: Trending Now
+I/flutter ( 4778): Building widget section: {ID: dd91883e52, i: 3, display: {type: slider, title: New Releases, sub_data: Freshly uploaded tracks for you., link: list/dd91883e52, pagination: true, bg_img: null, slider_size: medium, slider_mason: false, slider_rows: 1, list_columns: null, table_columns: null, table_labels: null, o_type: m_track, classes: type_slider c_o_type_page o_type_m_track has_title no_bg_img size_medium rows_1 liquid linked has_sub_data i2}, items: {1: [{title: Freedom - Acoustic Version, sub_data: Maher Zain, sub_link: music/artist/maher_zain, cover: <picture><source srcset="https://i.scdn.co/image/ab67616d0000b273af0f10938a9c88ed2746224f" type="image/jpeg" media="(min-width: 1344px)" ><source srcset="https://i.scdn.co/image/ab67616d00001e02af0f10938a9c88ed2746224f" type="image/jpeg" media="(min-width: 630px)" ><img src="https://i.scdn.co/image/ab67616d00004851af0f10938a9c88ed2746224f" alt="" loading="lazy" ></picture>, ot: m_track, price_hr: Free, price: 0, id: 69bca4f548102, url: music/track/maher_zain
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST user_edit?tab=profile
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): [API] POST client_config
+I/flutter ( 4778): Signature sent in body: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Signature sent in header: 15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): DEBUG: Header X-Bof-Platform is: web
+I/flutter ( 4778): DEBUG: Header Cookie is: PHPSESSID=bd88f25c5988e2c409dacb131f30e972
+I/flutter ( 4778): [API] Request body string: sess_id=bd88f25c5988e2c409dacb131f30e972&sess_key=69bc970f5ff08&bof_signature=15251d83f20eb3b488f10e4bfebce72c
+I/flutter ( 4778): Full Headers sent: {X-Bof-Request-Code: BusyOwlFrameWorkVersion201, x-bof-request-code: BusyOwlFrameWorkVersion201, X-Bof-Platform: web, x-bof-platform: web, X-Bof-Version: 2074, x-bof-version: 2074, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Content-Type: application/x-www-form-urlencoded, Accept: application/json, x-bof-device-cordova: 0, x-bof-device-is-virtual: false, x-bof-device-manufacturer: vivo, x-bof-device-model: v2158, x-bof-device-platform: android, x-bof-device-version: 14, x-bof-device-uuid: 8328ebd2-ed73-4d65-a41b-31a5d5e5b75c, x-bof-device-serial: 2c5aaa1b-fa86-4a6b-ac9c-55303bbf0b62, x-bof-app-package: com.hitune.app, x-bof-app-version: 1.0.0, x-bof-app-build: 1, x-bof-sess-key: 69bc970f5ff08, X-Bof-Sess-Key: 69bc970f5ff08, Cookie: PHPSESSID=bd88f25c5988e2c409dacb131f30e972, X-Bof-Signature: 15251d83f20eb3b488f10e4bfebce72c}
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] user_edit?tab=profile (200) -----
+I/flutter ( 4778): {
+I/flutter ( 4778):     "tab": "profile",
+I/flutter ( 4778):     "bofForm": {
+I/flutter ( 4778):         "ID": "profile",
+I/flutter ( 4778):         "inputs": {
+I/flutter ( 4778):             "name": {
+I/flutter ( 4778):                 "label": "Name<span class='_rm'>*<\/span>",
+I/flutter ( 4778):                 "tip": null,
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "type": "text",
+I/flutter ( 4778):                     "name": "name",
+I/flutter ( 4778):                     "value": "ANMOL SAUDA"
+I/flutter ( 4778):                 },
+I/flutter ( 4778):                 "bofInput": null,
+I/flutter ( 4778):                 "validator": null,
+I/flutter ( 4778):                 "display_on": null,
+I/flutter ( 4778):                 "group": null
+I/flutter ( 4778):             },
+I/flutter ( 4778):             "avatar_id": {
+I/flutter ( 4778):                 "label": "Avatar",
+I/flutter ( 4778):                 "tip": "Acceotable extensions: <b>jpg<\/b>, <b>gif<\/b>, <b>png<\/b>, <b>jpeg<\/b><br>Acceotable file size: min: <b>0.01MB<\/b>. max: <b>10MB<\/b><br>Acceptable image dimensions: min: <b>100*50px<\/b>. max: <b>2000*1500px<\/b>",
+I/flutter ( 4778):                 "input": {
+I/flutter ( 4778):                     "name": "avatar_id",
+I/flutter ( 4778):                     "type": "bof_file",
+I/flutter ( 4778):                     "value": 79,
+I/flutter ( 4778):                     "bof_file_pass": "2c74d8f7c3",
+I/flutter ( 4778):                 
+I/flutter ( 4778): ----- [API BODY END] user_edit?tab=profile (200) -----
+I/flutter ( 4778): [API] user_edit?tab=profile -> 200 success=true
+I/flutter ( 4778): ----- [API BODY START] client_config (200) -----
+I/flutter ( 4778):  
+I/flutter ( 4778): {
+I/flutter ( 4778):     "mobile": false,
+I/flutter ( 4778):     "brand": {
+I/flutter ( 4778):         "name": "HITUNE MUSIC",
+I/flutter ( 4778):         "logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f344909\/ic_hitunemusic_69b689cc707c3.webp",
+I/flutter ( 4778):         "secondary_logo": "https:\/\/music.hitune.in\/files\/logo\/26\/03\/15\/69b689f4ea8c0\/ic_hitunemusic_69b689d1847c8.webp",
+I/flutter ( 4778):         "sl_facebook": "",
+I/flutter ( 4778):         "sl_youtube": "",
+I/flutter ( 4778):         "sl_instagram": "",
+I/flutter ( 4778):         "sl_linkedin": "",
+I/flutter ( 4778):         "sl_soundcloud": "",
+I/flutter ( 4778):         "sl_spotify": "",
+I/flutter ( 4778):         "sl_twitter": "",
+I/flutter ( 4778):         "sl_tiktok": ""
+I/flutter ( 4778):     },
+I/flutter ( 4778):     "setting": {
+I/flutter ( 4778):         "private": false,
+I/flutter ( 4778):         "constructing": false,
+I/flutter ( 4778):         "social_login": true,
+I/flutter ( 4778):         "vapid_public": "BO5wEpfIxyTwiIR3q6Iq4jfIBs9TUnII7Nv_D53xpxEx_0FHjjDCwHgobXc2tEvFF6FBe0wK9wM23hTYl_-lKJ0",
+I/flutter ( 4778):         "additional_body_classes": [
+I/flutter ( 4778):             "_cc_1",
+I/flutter ( 4778):             "_lc_1"
+I/flutter ( 4778):         ],
+I/flutter ( 4778):         "muse": {
+I/flutter ( 4778):             "muse_hide": null,
+I/flutter ( 4778):             "muse_hide_yt": null,
+I/flutter ( 4778):             "muse_rec_thres": 10,
+I/flutter ( 4778):             "queue_hide_infinite": null,
+I/flutter ( 4778):             "q
+I/flutter ( 4778): ----- [API BODY END] client_config (200) -----
+I/flutter ( 4778): [API] client_config -> 200 success=true

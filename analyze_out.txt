@@ -1,0 +1,87 @@
+Analyzing hitune_music...                                       
+
+   info - The local variable '_sortedByKey' starts with an underscore - lib\core\network\api_service.dart:132:25 - no_leading_underscores_for_local_identifiers
+   info - The local variable '_sortedByKey' starts with an underscore - lib\core\network\api_service.dart:306:25 - no_leading_underscores_for_local_identifiers
+   info - The local variable '_int' starts with an underscore - lib\features\analytics\analytics_screen.dart:45:15 - no_leading_underscores_for_local_identifiers
+   info - Angle brackets will be interpreted as HTML - lib\features\analytics\analytics_service.dart:27:62 - unintended_html_in_doc_comment
+warning - The declaration '_slideToNextPage' isn't referenced - lib\features\artist\artist_screen.dart:84:8 - unused_element
+   info - Don't use 'BuildContext's across async gaps - lib\features\artist\artist_screen.dart:123:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\artist\artist_screen.dart:128:28 - use_build_context_synchronously
+warning - Dead code - lib\features\artist\artist_screen.dart:282:5 - dead_code
+warning - The declaration '_buildPopular' isn't referenced - lib\features\artist\artist_screen.dart:676:10 - unused_element
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\artist\artist_screen.dart:720:31 - unnecessary_null_comparison
+warning - The declaration '_buildAlbums' isn't referenced - lib\features\artist\artist_screen.dart:754:10 - unused_element
+warning - The '!' will have no effect because the receiver can't be null - lib\features\artist\artist_screen.dart:813:46 - unnecessary_non_null_assertion
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\artist\artist_screen.dart:821:43 - unnecessary_null_comparison
+warning - The declaration '_buildRelatedArtists' isn't referenced - lib\features\artist\artist_screen.dart:867:10 - unused_element
+warning - The '!' will have no effect because the receiver can't be null - lib\features\artist\artist_screen.dart:931:46 - unnecessary_non_null_assertion
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\artist\artist_screen.dart:939:43 - unnecessary_null_comparison
+warning - The '!' will have no effect because the receiver can't be null - lib\features\artist\artist_screen.dart:1046:42 - unnecessary_non_null_assertion
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\artist\artist_screen.dart:1054:39 - unnecessary_null_comparison
+warning - The '!' will have no effect because the receiver can't be null - lib\features\artist\artist_screen.dart:1363:50 - unnecessary_non_null_assertion
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\artist\artist_screen.dart:1371:47 - unnecessary_null_comparison
+warning - The '!' will have no effect because the receiver can't be null - lib\features\artist\artist_screen.dart:1472:50 - unnecessary_non_null_assertion
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\artist\artist_screen.dart:1480:47 - unnecessary_null_comparison
+   info - Unnecessary escape in string literal - lib\features\artist\artist_screen.dart:1583:38 - unnecessary_string_escapes
+warning - The operand can't be 'null', so the condition is always 'true' - lib\features\artist\artist_screen.dart:1679:27 - unnecessary_null_comparison
+warning - Unused import: 'browse_radios_screen.dart' - lib\features\browse\browse_screen.dart:6:8 - unused_import
+   info - Use of 'return' in a 'finally' clause - lib\features\collection\collection_screen.dart:268:21 - control_flow_in_finally
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\collection\collection_screen.dart:283:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\collection\collection_screen.dart:290:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\collection\collection_screen.dart:293:28 - use_build_context_synchronously
+   info - The local variable '_parseArtistSlugFromLink' starts with an underscore - lib\features\collection\collection_screen.dart:401:15 - no_leading_underscores_for_local_identifiers
+   info - Invalid regular expression syntax - lib\features\collection\collection_screen.dart:812:29 - valid_regexps
+warning - Unnecessary type check; the result is always 'true' - lib\features\config\client_config_service.dart:83:26 - unnecessary_type_check
+warning - Unused import: '../player/models/track.dart' - lib\features\downloads\downloads_screen.dart:3:8 - unused_import
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\features\home\home_screen.dart:1:8 - unnecessary_import
+warning - The value of the local variable 'isDark' isn't used - lib\features\home\home_screen.dart:760:11 - unused_local_variable
+   info - The local variable '_normalizeItems' starts with an underscore - lib\features\home\home_screen.dart:918:10 - no_leading_underscores_for_local_identifiers
+   info - Unnecessary escape in string literal - lib\features\info\info_screen.dart:29:39 - unnecessary_string_escapes
+   info - Unnecessary braces in a string interpolation - lib\features\info\iyol_app_service.dart:62:20 - unnecessary_brace_in_string_interps
+   info - The import of 'package:flutter/foundation.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\features\library\history_screen.dart:4:8 - unnecessary_import
+warning - A value for optional parameter 'coverUrl' isn't ever given - lib\features\library\library_screen.dart:196:10 - unused_element_parameter
+   info - Use interpolation to compose strings and values - lib\features\library\liked_songs_screen.dart:84:16 - prefer_interpolation_to_compose_strings
+   info - Don't use 'BuildContext's across async gaps - lib\features\library\playlist_picker_sheet.dart:124:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\library\playlists_screen.dart:78:7 - use_build_context_synchronously
+   info - The import of 'package:flutter/foundation.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\features\library\subscriptions_screen.dart:4:8 - unnecessary_import
+warning - The value of the local variable 'isDark' isn't used - lib\features\library\subscriptions_screen.dart:103:11 - unused_local_variable
+   info - The import of 'package:flutter/foundation.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\features\library\upload_wizard_screen.dart:4:8 - unnecessary_import
+   info - Don't use 'BuildContext's across async gaps - lib\features\library\upload_wizard_screen.dart:580:34 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\library\upload_wizard_screen.dart:584:34 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\library\upload_wizard_screen.dart:591:28 - use_build_context_synchronously
+   info - The import of 'package:flutter/foundation.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\features\library\uploads_screen.dart:4:8 - unnecessary_import
+   info - Don't use 'BuildContext's across async gaps - lib\features\library\uploads_screen.dart:130:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\library\uploads_screen.dart:136:28 - use_build_context_synchronously
+   info - The 'if' statement could be replaced by a null-aware assignment - lib\features\player\player_service.dart:1113:9 - prefer_conditional_assignment
+   info - The 'if' statement could be replaced by a null-aware assignment - lib\features\player\player_service.dart:1116:9 - prefer_conditional_assignment
+   info - The local variable '_pickFirstSourceEntry' starts with an underscore - lib\features\player\player_service.dart:1136:27 - no_leading_underscores_for_local_identifiers
+   info - The local variable '_raazParamsFromPayload' starts with an underscore - lib\features\player\player_service.dart:1144:27 - no_leading_underscores_for_local_identifiers
+   info - The local variable '_requestYoutubeId' starts with an underscore - lib\features\player\player_service.dart:1238:21 - no_leading_underscores_for_local_identifiers
+   info - The local variable '_pipedClientResolve' starts with an underscore - lib\features\player\player_service.dart:1270:21 - no_leading_underscores_for_local_identifiers
+   info - The local variable '_extractSourceType' starts with an underscore - lib\features\player\player_service.dart:1346:12 - no_leading_underscores_for_local_identifiers
+   info - The local variable '_extractPipedUrls' starts with an underscore - lib\features\player\player_service.dart:1355:19 - no_leading_underscores_for_local_identifiers
+   info - The local variable '_tryYoutubeDownload' starts with an underscore - lib\features\player\player_service.dart:1395:48 - no_leading_underscores_for_local_identifiers
+   info - The local variable '_solveRaazIfNeeded' starts with an underscore - lib\features\player\player_service.dart:1503:48 - no_leading_underscores_for_local_identifiers
+warning - The left operand can't be null, so the right operand is never executed - lib\features\player\player_service.dart:1705:44 - dead_null_aware_expression
+warning - The left operand can't be null, so the right operand is never executed - lib\features\player\player_service.dart:1770:44 - dead_null_aware_expression
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\artist_verification_screen.dart:119:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\artist_verification_screen.dart:124:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\artist_verification_screen.dart:152:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\artist_verification_screen.dart:156:39 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\edit_profile_screen.dart:434:18 - use_build_context_synchronously
+   info - Unnecessary use of 'toList' in a spread - lib\features\profile\edit_profile_screen.dart:990:14 - unnecessary_to_list_in_spreads
+   info - Unnecessary use of 'toList' in a spread - lib\features\profile\edit_profile_screen.dart:1068:65 - unnecessary_to_list_in_spreads
+   info - The private field _notifications could be 'final' - lib\features\profile\settings_screen.dart:40:21 - prefer_final_fields
+   info - The 'if' statement could be replaced by a null-aware assignment - lib\features\profile\settings_screen.dart:118:11 - prefer_conditional_assignment
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\profile\settings_screen.dart:346:38 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\profile\settings_screen.dart:858:42 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\profile\settings_screen.dart:863:40 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\profile\settings_screen.dart:871:40 - use_build_context_synchronously
+   info - Unnecessary use of 'toList' in a spread - lib\features\profile\upgrade_plans_screen.dart:560:20 - unnecessary_to_list_in_spreads
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\profile\wallet_screen.dart:307:46 - use_build_context_synchronously
+warning - Dead code - lib\features\search\search_screen.dart:105:5 - dead_code
+warning - The declaration '_openArtist' isn't referenced - lib\features\search\search_screen.dart:609:8 - unused_element
+warning - The value of the field '_embedableUrls' isn't used - lib\features\share\share_dialog.dart:30:16 - unused_field
+   info - The private field _accentColor could be 'final' - lib\features\share\share_dialog.dart:35:10 - prefer_final_fields
+
+83 issues found. (ran in 11.0s)

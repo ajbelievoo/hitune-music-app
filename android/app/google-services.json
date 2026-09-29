@@ -1,0 +1,363 @@
+{
+  "project_info": {
+    "project_number": "759752024135",
+    "firebase_url": "https://hitune-live-box-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hitune-live-box",
+    "storage_bucket": "hitune-live-box.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759752024135:android:a40747e6d55a557e325162",
+        "android_client_info": {
+          "package_name": "com.believoo.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759752024135-083f701alspp2tc9cqi13dh8a381gbv8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "ac4bc66244c8394696472e3e56b40c4f9d5a4b2e"
+          }
+        },
+        {
+          "client_id": "759752024135-0dhtjriaa0rsa0edlaf69pmmipnetff6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "ee3794d3f3b34185d98fa0a1e98be48a8b540c89"
+          }
+        },
+        {
+          "client_id": "759752024135-8h57a9e6imekffhtdo5plavc39ojrjrb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "fba2930f831efc1f76719faefa36e230578d5aec"
+          }
+        },
+        {
+          "client_id": "759752024135-9qtghc88r9jtiorgc2pabj1h6qe6sinf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "d4904c036b51d76dfbf1575f312bad711b7e7d81"
+          }
+        },
+        {
+          "client_id": "759752024135-a9tgve4vu7ck54p05lc83tsr185rn1kl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "95f6855bb184de62df446ef64e08d2fb144abfc2"
+          }
+        },
+        {
+          "client_id": "759752024135-acap0fh5qoo2korbjb2ji8qvc4hsobdr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "e70b663b1b0ff2ed41f1333f305d5b8bbe2945b2"
+          }
+        },
+        {
+          "client_id": "759752024135-bq2l6k3idu4diaj5mfl9i8ojenm8fdtb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "ee239879c1ccaa80bb17900af941b2f0d1979421"
+          }
+        },
+        {
+          "client_id": "759752024135-gd3bmb4dos83g9g8oqd3kce2rf6actsu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b"
+          }
+        },
+        {
+          "client_id": "759752024135-mlaj06q0obuql87ssfsl4pk737qb76cl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "13842f6da12eb1711ad52d50bce4c6711053a171"
+          }
+        },
+        {
+          "client_id": "759752024135-orp5bq8qvs8rsvkddlsbaiau3chbh67q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "aabbccddeeff11223344556677889900aabbccdd"
+          }
+        },
+        {
+          "client_id": "759752024135-r0upk9ufu4k3teg1nmdaoqsbrtt26p86.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "ad115820294ab2dcad46068ae81411a9a88a5143"
+          }
+        },
+        {
+          "client_id": "759752024135-tps3ra4lgd98igjgf1anstd42ivrlfht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "386903d7f25f7c93016e846bedf552e3f5686c66"
+          }
+        },
+        {
+          "client_id": "759752024135-ucphpt70478ffu5vesi2liqb581cjpbi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.believoo.app",
+            "certificate_hash": "098c2201bcdb870a99688103f7e0b2461d15a5a5"
+          }
+        },
+        {
+          "client_id": "759752024135-qfm2fahpo2bpcn5baceoijtoh1gp74n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvpVSxhVOFv5cyd7nNxCF797DjYYVMSmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759752024135-647o3e91kn4bruprqpcuvj8bosobe2lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1326731170162052~9335588055"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759752024135:android:0d0d1086e0d8e70a325162",
+        "android_client_info": {
+          "package_name": "com.gamer.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759752024135-2udkfcpsgii5nb3n6isvmotl3j46vdd2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gamer.app",
+            "certificate_hash": "9656e59f82bc4542e49fe48b757e2cd0d7e1bc60"
+          }
+        },
+        {
+          "client_id": "759752024135-qfm2fahpo2bpcn5baceoijtoh1gp74n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvpVSxhVOFv5cyd7nNxCF797DjYYVMSmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759752024135-647o3e91kn4bruprqpcuvj8bosobe2lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759752024135:android:411a2b007290741d325162",
+        "android_client_info": {
+          "package_name": "com.himota.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759752024135-qfm2fahpo2bpcn5baceoijtoh1gp74n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvpVSxhVOFv5cyd7nNxCF797DjYYVMSmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759752024135-647o3e91kn4bruprqpcuvj8bosobe2lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759752024135:android:62f04aa16b410599325162",
+        "android_client_info": {
+          "package_name": "com.hitune.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759752024135-qfm2fahpo2bpcn5baceoijtoh1gp74n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvpVSxhVOFv5cyd7nNxCF797DjYYVMSmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759752024135-647o3e91kn4bruprqpcuvj8bosobe2lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759752024135:android:53cb839310b3c100325162",
+        "android_client_info": {
+          "package_name": "com.trackone.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759752024135-oe1pojcgn8o9ah85t3krec05hgboq38g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trackone.app",
+            "certificate_hash": "ad115820294ab2dcad46068ae81411a9a88a5143"
+          }
+        },
+        {
+          "client_id": "759752024135-qfm2fahpo2bpcn5baceoijtoh1gp74n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvpVSxhVOFv5cyd7nNxCF797DjYYVMSmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759752024135-647o3e91kn4bruprqpcuvj8bosobe2lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759752024135:android:cd13a77999b7772b325162",
+        "android_client_info": {
+          "package_name": "com.vidmite.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759752024135-49ig7bi2ris8r768t5srkt2r7tvqq6ro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vidmite.app",
+            "certificate_hash": "e70b663b1b0ff2ed41f1333f305d5b8bbe2945b2"
+          }
+        },
+        {
+          "client_id": "759752024135-73a8q2a56jdhamsl9hrsh2t6s427eogb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vidmite.app",
+            "certificate_hash": "75c900a398aa06880fb84959fe2b14df8413d8af"
+          }
+        },
+        {
+          "client_id": "759752024135-93lemmaarflcdv4h8btk47eqaeragd91.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vidmite.app",
+            "certificate_hash": "9656e59f82bc4542e49fe48b757e2cd0d7e1bc60"
+          }
+        },
+        {
+          "client_id": "759752024135-dd7ou4sn2s15pqpe6j3p9mjmq9auehs3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vidmite.app",
+            "certificate_hash": "ad115820294ab2dcad46068ae81411a9a88a5143"
+          }
+        },
+        {
+          "client_id": "759752024135-jpp3e7v9gt5cg7qi65v0sb57lk3astcd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vidmite.app",
+            "certificate_hash": "386903d7f25f7c93016e846bedf552e3f5686c66"
+          }
+        },
+        {
+          "client_id": "759752024135-ovtjm2aa3h8q7ouk1789naqrm6955sd9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vidmite.app",
+            "certificate_hash": "057701449c7960b8de21cfc505dd2199fe234250"
+          }
+        },
+        {
+          "client_id": "759752024135-retg87vn8n18uh76492ip263k8hdmqaj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vidmite.app",
+            "certificate_hash": "d4904c036b51d76dfbf1575f312bad711b7e7d81"
+          }
+        },
+        {
+          "client_id": "759752024135-qfm2fahpo2bpcn5baceoijtoh1gp74n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvpVSxhVOFv5cyd7nNxCF797DjYYVMSmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759752024135-647o3e91kn4bruprqpcuvj8bosobe2lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1326731170162052~6864414917"
+    }
+  ],
+  "configuration_version": "1"
+}
