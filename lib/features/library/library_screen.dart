@@ -15,7 +15,7 @@ import 'recently_played_screen.dart';
 import 'subscriptions_screen.dart';
 import 'history_screen.dart';
 import 'uploads_screen.dart';
-import 'upload_wizard_screen.dart';
+import 'upload_redirect_screen.dart';
 
 class LibraryScreen extends StatefulWidget {
   final bool useScaffold;
@@ -155,10 +155,10 @@ class _LibraryScreenState extends State<LibraryScreen> {
           ),
           _LibraryTile(
             title: 'Upload Music',
-            subtitle: 'Add new tracks or albums',
+            subtitle: 'Via HiTune Distribution portal',
             icon: Icons.add_circle_rounded,
             iconColor: const Color(0xFF9CCC65),
-            onTap: () => _push(const UploadWizardScreen(), requireLogin: true),
+            onTap: () => _push(const UploadRedirectScreen(), requireLogin: true),
           ),
         ],
       ),

@@ -458,6 +458,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
           artistLink: artistLink.isEmpty ? null : artistLink,
           objectType: ot.isEmpty ? 'm_track' : ot,
           objectHash: hash,
+          aiPct: Track.aiPctFromJson(t),
         ),
       );
     }

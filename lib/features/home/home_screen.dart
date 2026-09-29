@@ -269,6 +269,7 @@ class _TableWidgetState extends State<_TableWidget> {
       artistLink: artistLink.isEmpty ? null : artistLink,
       objectType: ot.isEmpty ? 'm_track' : ot,
       objectHash: hash,
+      aiPct: Track.aiPctFromJson(t),
     );
   }
 

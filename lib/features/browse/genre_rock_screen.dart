@@ -80,6 +80,7 @@ class _GenreRockScreenState extends State<GenreRockScreen> {
       artistLink: artistLink.isEmpty ? null : artistLink,
       objectType: objectType,
       objectHash: objectHash,
+      aiPct: Track.aiPctFromJson(item),
     );
   }
 

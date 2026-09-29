@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import '../player/models/track.dart';
+import '../../core/ui/ai_badge.dart';
 import '../../core/ui/cover_image.dart';
 import '../../core/utils/cover_image_extractor.dart';
 import 'browse_feed_service.dart';
@@ -86,6 +87,7 @@ class _BrowseTracksScreenState extends State<BrowseTracksScreen> {
       artistLink: artistLink.isEmpty ? null : artistLink,
       objectType: objectType,
       objectHash: objectHash,
+      aiPct: Track.aiPctFromJson(item),
     );
   }
 
@@ -230,15 +232,26 @@ class _BrowseTracksScreenState extends State<BrowseTracksScreen> {
                     ),
                   ),
                 ),
-                title: Text(
-                  track.title,
-                  style: TextStyle(
-                    color: isCurrent ? accent : (isDark ? Colors.white : Colors.black),
-                    fontWeight: isCurrent ? FontWeight.w800 : FontWeight.w600,
-                    fontSize: 16,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
+                title: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        track.title,
+                        style: TextStyle(
+                          color: isCurrent ? accent : (isDark ? Colors.white : Colors.black),
+                          fontWeight: isCurrent ? FontWeight.w800 : FontWeight.w600,
+                          fontSize: 16,
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    if (track.isAiGenerated) ...[
+                      const SizedBox(width: 6),
+                      AiBadge(aiPct: track.aiPct),
+                    ],
+                  ],
                 ),
                 subtitle: track.subtitle != null
                     ? Text(

@@ -80,6 +80,7 @@ class _GenreHipHopScreenState extends State<GenreHipHopScreen> {
       artistLink: artistLink.isEmpty ? null : artistLink,
       objectType: objectType,
       objectHash: objectHash,
+      aiPct: Track.aiPctFromJson(item),
     );
   }
 

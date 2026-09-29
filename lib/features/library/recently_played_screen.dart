@@ -200,6 +200,7 @@ class _RecentlyPlayedScreenState extends State<RecentlyPlayedScreen> {
       objectType: objectType.isEmpty ? 'm_track' : objectType,
       objectHash: objectHash.isEmpty ? null : objectHash,
       artistSlug: artistSlug.isEmpty ? null : artistSlug,
+      aiPct: Track.aiPctFromJson(m),
     );
   }
 

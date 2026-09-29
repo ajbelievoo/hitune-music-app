@@ -28,6 +28,10 @@ class Track {
   /// Whether the track is marked explicit by the backend.
   final bool isExplicit;
 
+  /// Percentage of AI generation declared for this track (0-100).
+  /// Backend column `_c_m_tracks.ai_pct`; >0 shows the "AI Original" badge.
+  final int aiPct;
+
   const Track({
     required this.id,
     required this.title,
@@ -43,7 +47,17 @@ class Track {
     this.durationSeconds,
     this.albumTitle,
     this.isExplicit = false,
+    this.aiPct = 0,
   });
+
+  bool get isAiGenerated => aiPct > 0;
+
+  /// Compact parser for the backend `ai_pct` field (may come as int/string).
+  static int aiPctFromJson(Map<String, dynamic> json) {
+    final v = json['ai_pct'] ?? json['aiPct'];
+    if (v is num) return v.toInt();
+    return int.tryParse('${v ?? 0}') ?? 0;
+  }
 
   Track copyWith({
     String? id,
@@ -60,6 +74,7 @@ class Track {
     int? durationSeconds,
     String? albumTitle,
     bool? isExplicit,
+    int? aiPct,
   }) {
     return Track(
       id: id ?? this.id,
@@ -76,6 +91,7 @@ class Track {
       durationSeconds: durationSeconds ?? this.durationSeconds,
       albumTitle: albumTitle ?? this.albumTitle,
       isExplicit: isExplicit ?? this.isExplicit,
+      aiPct: aiPct ?? this.aiPct,
     );
   }
 }

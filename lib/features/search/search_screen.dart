@@ -310,6 +310,7 @@ class _SearchScreenState extends State<SearchScreen> {
               artistLink: artistLink.isEmpty ? null : artistLink,
               objectType: 'm_track',
               objectHash: hash,
+              aiPct: Track.aiPctFromJson(t),
             ),
           ),
         );

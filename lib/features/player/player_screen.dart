@@ -11,6 +11,7 @@ import 'dart:ui';
 import '../auth/auth_gate.dart';
 import '../artist/artist_screen.dart';
 import '../share/share_dialog.dart';
+import '../../core/ui/ai_badge.dart';
 import 'player_service.dart';
 import 'queue_sheet.dart';
 import 'sleep_timer_sheet.dart';
@@ -879,6 +880,10 @@ class _PlayerScreenState extends State<PlayerScreen> {
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.center,
                             ),
+                            if (track.isAiGenerated) ...[
+                              const SizedBox(height: 8),
+                              AiBadge(aiPct: track.aiPct, compact: false),
+                            ],
                             const SizedBox(height: 6),
                             GestureDetector(
                               behavior: HitTestBehavior.opaque,

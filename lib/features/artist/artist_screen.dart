@@ -480,6 +480,7 @@ class _ArtistScreenState extends State<ArtistScreen> with SingleTickerProviderSt
           coverUrl: cover,
           objectType: objectType ?? 'm_track',
           objectHash: objectHash,
+          aiPct: Track.aiPctFromJson(it),
         ),
       );
     }
@@ -1641,6 +1642,7 @@ Widget _buildLatestTracksSliver(Map<String, dynamic> data) {
                   coverUrl: cover,
                   objectType: objectType ?? 'm_track',
                   objectHash: objectHash,
+                  aiPct: Track.aiPctFromJson(it),
                 ),
               );
             }
@@ -1943,6 +1945,7 @@ Widget _buildLatestTracksSliver(Map<String, dynamic> data) {
       artistLink: it['sub_link']?.toString(),
       objectType: (objectType == null || objectType.isEmpty) ? 'm_track' : objectType,
       objectHash: objectHash,
+      aiPct: Track.aiPctFromJson(it),
     );
     await PlayerService.instance.playClip(track);
     // A clip resolved to a video stream needs the full player surface —
@@ -2162,6 +2165,7 @@ Widget _buildLatestTracksSliver(Map<String, dynamic> data) {
                       coverUrl: cover,
                       objectType: objectType ?? 'm_track',
                       objectHash: objectHash,
+                      aiPct: Track.aiPctFromJson(item),
                     );
                     final currentQueue = PlayerService.instance.queue;
                     final newQueue = [...currentQueue, track];

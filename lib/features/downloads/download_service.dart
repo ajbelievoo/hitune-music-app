@@ -31,7 +31,10 @@ class DownloadedTrack {
     this.objectType,
     this.objectHash,
     this.bytes = 0,
+    this.aiPct = 0,
   });
+
+  final int aiPct;
 
   Map<String, dynamic> toJson() => {
         'id': id,
@@ -42,6 +45,7 @@ class DownloadedTrack {
         'objectHash': objectHash,
         'filePath': filePath,
         'bytes': bytes,
+        'aiPct': aiPct,
         'downloadedAt': downloadedAt.millisecondsSinceEpoch,
       };
 
@@ -54,6 +58,7 @@ class DownloadedTrack {
         objectHash: json['objectHash']?.toString(),
         filePath: json['filePath']?.toString() ?? '',
         bytes: json['bytes'] is int ? json['bytes'] as int : int.tryParse('${json['bytes']}') ?? 0,
+        aiPct: json['aiPct'] is int ? json['aiPct'] as int : int.tryParse('${json['aiPct'] ?? json['ai_pct']}') ?? 0,
         downloadedAt: DateTime.fromMillisecondsSinceEpoch(
           json['downloadedAt'] is int ? json['downloadedAt'] as int : int.tryParse('${json['downloadedAt']}') ?? 0,
         ),
@@ -68,6 +73,7 @@ class DownloadedTrack {
         objectHash: objectHash,
         url: Uri.file(filePath).toString(),
         sourceType: 'audio',
+        aiPct: aiPct,
       );
 }
 
@@ -212,6 +218,7 @@ class DownloadService {
         objectHash: track.objectHash,
         filePath: file.path,
         bytes: received,
+        aiPct: track.aiPct,
         downloadedAt: DateTime.now(),
       );
       await _persist();

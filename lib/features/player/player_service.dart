@@ -489,6 +489,7 @@ class PlayerService {
       objectType: t.objectType,
       objectHash: t.objectHash,
       sourceType: t.sourceType,
+      aiPct: t.aiPct,
     );
   }
 

@@ -102,6 +102,7 @@ class RecommendationsService {
       artistLink: artistLink.isEmpty ? null : artistLink,
       objectType: ot?.isNotEmpty == true ? ot : 'm_track',
       objectHash: hash,
+      aiPct: Track.aiPctFromJson(item),
     );
   }
 }

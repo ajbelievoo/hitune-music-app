@@ -241,6 +241,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
           url: trackData['source']?.toString() ?? '',
           subtitle: trackData['artist']?.toString(),
           coverUrl: CoverImageExtractor.extract(trackData),
+          aiPct: Track.aiPctFromJson(trackData),
         );
         PlayerService.instance.playTrack(track);
       }

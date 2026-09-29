@@ -3,6 +3,7 @@ import 'package:just_audio/just_audio.dart';
 
 import '../auth/auth_gate.dart';
 import '../artist/artist_screen.dart';
+import '../../core/ui/ai_badge.dart';
 import '../../core/ui/cover_image.dart';
 import '../../core/utils/artist_utils.dart';
 import '../../core/utils/cover_image_extractor.dart';
@@ -186,11 +187,22 @@ class MiniPlayer extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                track.title,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: theme.textTheme.titleSmall,
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Flexible(
+                                    child: Text(
+                                      track.title,
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: theme.textTheme.titleSmall,
+                                    ),
+                                  ),
+                                  if (track.isAiGenerated) ...[
+                                    const SizedBox(width: 6),
+                                    AiBadge(aiPct: track.aiPct),
+                                  ],
+                                ],
                               ),
                               if (track.subtitle?.isNotEmpty == true)
                                 GestureDetector(
