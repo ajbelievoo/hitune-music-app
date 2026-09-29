@@ -7,11 +7,13 @@ import 'package:provider/provider.dart';
 
 import '../../core/ui/hi_tune_card.dart';
 import '../../core/ui/section_header.dart';
+import '../clips/clips_screen.dart';
 import '../collection/collection_screen.dart';
 import '../collection/collection_service.dart';
 import '../config/client_config_service.dart';
 import '../../core/theme/theme_service.dart';
 import '../../core/ads/ad_service.dart';
+import '../ai_studio/ai_studio_screen.dart';
 import '../info/info_screen.dart';
 import '../info/iyol_app_screen.dart';
 import '../player/models/track.dart';
@@ -660,6 +662,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     children: [
                       // Browse categories (not in bottom nav)
+                      _buildMenuItem(context, Icons.play_circle_outline, 'Short Clips', () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const ClipsScreen()),
+                        );
+                      }),
+                      _buildMenuItem(context, Icons.auto_awesome, 'AI Studio', () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const AiStudioScreen()),
+                        );
+                      }),
                       _buildMenuItem(context, Icons.rocket, "Rock'n'Roll", () {
                         Navigator.push(
                           context,

@@ -12,6 +12,7 @@ import 'features/shell/app_shell.dart';
 import 'features/auth/auth_service.dart';
 import 'features/auth/auth_state_service.dart';
 import 'features/config/client_config_service.dart';
+import 'features/clips/clips_screen.dart';
 import 'features/library/upload_redirect_screen.dart';
 import 'features/subscription/subscription_service.dart';
 import 'core/l10n/locale_service.dart';
@@ -237,6 +238,7 @@ class _MyAppState extends State<MyApp> {
             '/splash': (context) => const SplashScreen(),
             '/main': (context) => const AppShell(),
             '/upload': (context) => const UploadRedirectScreen(),
+            '/clips': (context) => const ClipsScreen(),
           },
         );
       },

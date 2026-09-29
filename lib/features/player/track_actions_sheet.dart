@@ -7,6 +7,7 @@ import '../artist/artist_screen.dart';
 import '../auth/auth_gate.dart';
 import '../comments/comments_sheet.dart';
 import '../downloads/download_service.dart';
+import '../iyol/iyol_publish_service.dart';
 import '../library/playlist_picker_sheet.dart';
 import '../share/share_dialog.dart';
 import '../subscription/feature_gate.dart';
@@ -185,6 +186,26 @@ class TrackActionsSheet extends StatelessWidget {
                 objectType: track.objectType ?? 'm_track',
                 objectHash: track.objectHash ?? track.id,
               );
+            },
+          ),
+          _ActionTile(
+            icon: Icons.video_call_rounded,
+            label: 'Publish as Reel on IyolMe',
+            onTap: () async {
+              Navigator.of(context).pop();
+              final ok = await AuthGate.ensureLoggedIn(rootContext,
+                  reason: 'Login required to publish to IyolMe.');
+              if (!ok || !rootContext.mounted) return;
+              final messenger = ScaffoldMessenger.of(rootContext);
+              messenger.showSnackBar(
+                  const SnackBar(content: Text('Rendering clip for IyolMe...')));
+              final res = await IyolPublishService.instance.publishTrack(track);
+              if (!rootContext.mounted) return;
+              messenger.showSnackBar(SnackBar(
+                content: Text(res.success
+                    ? 'Published as reel on IyolMe'
+                    : 'Publish failed: ${res.error}'),
+              ));
             },
           ),
           _ActionTile(
