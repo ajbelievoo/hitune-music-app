@@ -3,6 +3,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../auth/models/user_context.dart';
 import '../auth/login_screen.dart';
@@ -14,7 +15,6 @@ import '../config/client_config_service.dart';
 import '../../core/storage/secure_storage.dart';
 import '../../core/theme/theme_service.dart';
 import '../auth/auth_gate.dart';
-import 'artist_verification_screen.dart';
 import 'edit_profile_screen.dart';
 import 'sessions_screen.dart';
 import 'upgrade_plans_screen.dart';
@@ -485,7 +485,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         _buildSectionTitle('Account Settings'),
                         const SizedBox(height: 12),
                         _buildMenuList([
-                          _MenuItem(Icons.verified_outlined, 'Artist Verification', _brandViolet, () => ArtistVerificationScreen.openWithAuth(context)),
+                          _MenuItem(Icons.verified_outlined, 'Artist Panel', _brandViolet, () => launchUrl(
+                            Uri.parse('https://distribution.hitune.in/index.php?q=artist-panel#verification'),
+                            mode: LaunchMode.externalApplication)),
                           _MenuItem(Icons.workspace_premium, 'Upgrade Plans', _brandGold, () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const UpgradePlansScreen()))),
                           _MenuItem(Icons.devices_outlined, 'Sessions', _brandCyan, () => SessionsScreen.openWithAuth(context)),
                           _MenuItem(Icons.apps_outage, 'Other Apps', _brandPink, () {
