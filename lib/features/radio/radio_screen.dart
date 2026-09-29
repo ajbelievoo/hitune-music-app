@@ -2,8 +2,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../browse/browse_feed_service.dart';
+import '../../core/network/api_service.dart';
 import '../../core/ui/section_header.dart';
 import '../../core/utils/app_logger.dart';
+import '../../core/utils/cover_image_extractor.dart';
 import '../player/models/track.dart';
 import '../player/player_service.dart';
 
@@ -18,6 +20,61 @@ class _RadioScreenState extends State<RadioScreen> {
   List<Map<String, dynamic>> _radios = [];
   bool _isLoading = true;
   String _error = '';
+  String? _startingStation;
+
+  // HiTune-generated chart stations (doc §8) — popularity-weighted queues
+  // of catalog tracks, served by POST /api/htx/radio.
+  static const _htxStations = [
+    ('viral', 'Viral Radio', 'This week\'s hottest tracks', Icons.local_fire_department_rounded),
+    ('indie', 'Indie Radio', 'Independent artists on HiTune', Icons.star_outline_rounded),
+    ('top_ai', 'AI Radio', 'Top AI Originals', Icons.auto_awesome_rounded),
+    ('mixed', 'HiTune Radio', 'Popularity-weighted mix', Icons.radio_rounded),
+  ];
+
+  Future<void> _startHtxStation(String seed) async {
+    setState(() => _startingStation = seed);
+    final res = await ApiService.instance.postPayloadRaw(
+      endpoint: 'htx/radio',
+      data: {'chart': seed, 'limit': '30'},
+    );
+    if (!mounted) return;
+    setState(() => _startingStation = null);
+    if (!res.isSuccess || res.data == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(res.error?.message ?? 'Station failed to load')));
+      return;
+    }
+    final list = res.data!['items'];
+    final tracks = <Track>[];
+    if (list is List) {
+      for (final it in list) {
+        if (it is! Map) continue;
+        final t = _trackFromItem(Map<String, dynamic>.from(it));
+        if (t != null) tracks.add(t);
+      }
+    }
+    if (tracks.isEmpty) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('Station queue is empty')));
+      return;
+    }
+    await PlayerService.instance.playQueue(tracks);
+  }
+
+  Track? _trackFromItem(Map<String, dynamic> item) {
+    final id = (item['ID'] ?? item['id'] ?? item['hash'] ?? item['object_hash'])?.toString();
+    if (id == null || id.isEmpty) return null;
+    return Track(
+      id: id,
+      title: (item['title'] ?? 'Unknown').toString(),
+      subtitle: (item['sub_title'] ?? item['sub_data'] ?? '').toString(),
+      url: (item['url'] ?? '').toString(),
+      coverUrl: CoverImageExtractor.extract(item),
+      objectType: (item['object_type'] ?? item['ot'] ?? 'm_track').toString(),
+      objectHash: (item['hash'] ?? item['object_hash'] ?? id).toString(),
+      aiPct: Track.aiPctFromJson(item),
+    );
+  }
 
   @override
   void initState() {
@@ -93,27 +150,56 @@ class _RadioScreenState extends State<RadioScreen> {
           ? const Center(child: CircularProgressIndicator())
           : _error.isNotEmpty
               ? _buildError(theme)
-              : _radios.isEmpty
-                  ? _buildEmpty(theme)
-                  : RefreshIndicator(
+              : RefreshIndicator(
                       onRefresh: _loadRadios,
                       child: CustomScrollView(
                         slivers: [
                           const SliverToBoxAdapter(
-                            child: SectionHeader(title: 'Featured Stations'),
+                            child: SectionHeader(title: 'HiTune Stations'),
                           ),
-                          SliverPadding(
-                            padding: const EdgeInsets.symmetric(horizontal: 16),
-                            sliver: SliverList(
-                              delegate: SliverChildBuilderDelegate(
-                                (context, index) => _RadioTile(
-                                  radio: _radios[index],
-                                  onTap: () => _playRadio(_radios[index]),
-                                ),
-                                childCount: _radios.length,
+                          SliverToBoxAdapter(
+                            child: SizedBox(
+                              height: 46,
+                              child: ListView.separated(
+                                scrollDirection: Axis.horizontal,
+                                padding: const EdgeInsets.symmetric(horizontal: 16),
+                                itemCount: _htxStations.length,
+                                separatorBuilder: (_, __) => const SizedBox(width: 8),
+                                itemBuilder: (context, i) {
+                                  final s = _htxStations[i];
+                                  final starting = _startingStation == s.$1;
+                                  return ActionChip(
+                                    avatar: Icon(s.$4, size: 16),
+                                    label: Text(starting ? 'Starting…' : s.$2),
+                                    onPressed: starting ? null : () => _startHtxStation(s.$1),
+                                  );
+                                },
                               ),
                             ),
                           ),
+                          const SliverToBoxAdapter(
+                            child: SectionHeader(title: 'Featured Stations'),
+                          ),
+                          if (_radios.isEmpty)
+                            const SliverToBoxAdapter(
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 16),
+                                child: Text('No featured stations yet'),
+                              ),
+                            )
+                          else
+                            SliverPadding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                              sliver: SliverList(
+                                delegate: SliverChildBuilderDelegate(
+                                  (context, index) => _RadioTile(
+                                    radio: _radios[index],
+                                    onTap: () => _playRadio(_radios[index]),
+                                  ),
+                                  childCount: _radios.length,
+                                ),
+                              ),
+                            ),
                         ],
                       ),
                     ),
@@ -133,11 +219,6 @@ class _RadioScreenState extends State<RadioScreen> {
     );
   }
 
-  Widget _buildEmpty(ThemeData theme) {
-    return Center(
-      child: Text('No radios available', style: theme.textTheme.bodyMedium),
-    );
-  }
 }
 
 class _RadioTile extends StatelessWidget {

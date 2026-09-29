@@ -17,12 +17,11 @@ class TipService {
         data: const {'action': 'wallet'},
       );
       if (!res.isSuccess || res.data == null) return null;
-      final w = res.data!['wallet'];
-      if (w is! Map) return null;
+      final w = res.data!;
       return TipWallet(
         balance: (w['balance'] as num?)?.toDouble() ?? 0,
-        tipped: (w['tipped'] as num?)?.toDouble() ?? 0,
-        earned: (w['earned'] as num?)?.toDouble() ?? 0,
+        tipped: (w['tips_sent'] as num?)?.toDouble() ?? 0,
+        earned: (w['tips_earned'] as num?)?.toDouble() ?? 0,
       );
     } catch (e) {
       AppLogger.d('tip wallet fetch failed: $e');

@@ -12,8 +12,13 @@ import 'features/shell/app_shell.dart';
 import 'features/auth/auth_service.dart';
 import 'features/auth/auth_state_service.dart';
 import 'features/config/client_config_service.dart';
+import 'features/charts/charts_screen.dart';
 import 'features/clips/clips_screen.dart';
+import 'features/contests/contests_screen.dart';
 import 'features/library/upload_redirect_screen.dart';
+import 'features/parties/parties_screen.dart';
+import 'features/radio/radio_screen.dart';
+import 'features/tipping/tip_history_screen.dart';
 import 'features/subscription/subscription_service.dart';
 import 'core/l10n/locale_service.dart';
 import 'core/services/deep_link_service.dart';
@@ -239,6 +244,11 @@ class _MyAppState extends State<MyApp> {
             '/main': (context) => const AppShell(),
             '/upload': (context) => const UploadRedirectScreen(),
             '/clips': (context) => const ClipsScreen(),
+            '/charts': (context) => const ChartsScreen(),
+            '/radio': (context) => const RadioScreen(),
+            '/parties': (context) => const PartiesScreen(),
+            '/contests': (context) => const ContestsScreen(),
+            '/tips': (context) => const TipHistoryScreen(),
           },
         );
       },

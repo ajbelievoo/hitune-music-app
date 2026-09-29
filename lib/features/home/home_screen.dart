@@ -7,7 +7,12 @@ import 'package:provider/provider.dart';
 
 import '../../core/ui/hi_tune_card.dart';
 import '../../core/ui/section_header.dart';
+import '../charts/charts_screen.dart';
 import '../clips/clips_screen.dart';
+import '../contests/contests_screen.dart';
+import '../parties/parties_screen.dart';
+import '../radio/radio_screen.dart';
+import '../tipping/tip_history_screen.dart';
 import '../collection/collection_screen.dart';
 import '../collection/collection_service.dart';
 import '../config/client_config_service.dart';
@@ -672,6 +677,36 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (_) => const AiStudioScreen()),
+                        );
+                      }),
+                      _buildMenuItem(context, Icons.leaderboard_rounded, 'Charts', () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const ChartsScreen()),
+                        );
+                      }),
+                      _buildMenuItem(context, Icons.radio_rounded, 'Radio', () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const RadioScreen()),
+                        );
+                      }),
+                      _buildMenuItem(context, Icons.surround_sound_rounded, 'Listening Parties', () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const PartiesScreen()),
+                        );
+                      }),
+                      _buildMenuItem(context, Icons.emoji_events_rounded, 'Contests', () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const ContestsScreen()),
+                        );
+                      }),
+                      _buildMenuItem(context, Icons.volunteer_activism_rounded, 'Tips & Wallet', () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const TipHistoryScreen()),
                         );
                       }),
                       _buildMenuItem(context, Icons.rocket, "Rock'n'Roll", () {
