@@ -12,6 +12,7 @@ import '../library/playlist_picker_sheet.dart';
 import '../share/share_dialog.dart';
 import '../subscription/feature_gate.dart';
 import '../subscription/subscription_service.dart';
+import '../tipping/tip_sheet.dart';
 import 'lyrics_screen.dart';
 import 'models/track.dart';
 import 'player_service.dart';
@@ -206,6 +207,17 @@ class TrackActionsSheet extends StatelessWidget {
                     ? 'Published as reel on IyolMe'
                     : 'Publish failed: ${res.error}'),
               ));
+            },
+          ),
+          _ActionTile(
+            icon: Icons.volunteer_activism_rounded,
+            label: 'Tip Artist',
+            onTap: () async {
+              Navigator.of(context).pop();
+              final ok = await AuthGate.ensureLoggedIn(rootContext,
+                  reason: 'Login required to tip artists.');
+              if (!ok || !rootContext.mounted) return;
+              await TipSheet.show(rootContext, track);
             },
           ),
           _ActionTile(
