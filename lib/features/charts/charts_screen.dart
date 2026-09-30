@@ -156,7 +156,7 @@ class _ChartsScreenState extends State<ChartsScreen> {
                                     ),
                                     if (t.aiPct > 0) ...[
                                       const SizedBox(width: 6),
-                                      const AiBadge(),
+                                      AiBadge(aiPct: t.aiPct),
                                     ],
                                   ],
                                 ),
