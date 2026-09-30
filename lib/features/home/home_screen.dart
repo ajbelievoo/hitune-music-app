@@ -42,6 +42,7 @@ import '../browse/genre_hiphop_screen.dart';
 import '../downloads/downloads_screen.dart';
 import '../notifications/notifications_screen.dart';
 import '../profile/profile_screen.dart';
+import 'iyol_stories_rail.dart';
 import 'made_for_you_section.dart';
 import 'home_rails.dart';
 import 'recommendations_service.dart';
@@ -864,6 +865,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                   child: CustomScrollView(
                     slivers: [
+                      // IyolMe stories rail — recent public stories deep-link
+                      // into the IyolMe app. Renders nothing when empty.
+                      const SliverToBoxAdapter(child: IyolStoriesRail()),
                       // Personalized rail - renders only when backend provides
                       // recommendations (see RecommendationsService).
                       const SliverToBoxAdapter(child: MadeForYouSection()),

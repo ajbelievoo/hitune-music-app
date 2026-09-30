@@ -7,6 +7,7 @@ import '../artist/artist_screen.dart';
 import '../auth/auth_gate.dart';
 import '../comments/comments_sheet.dart';
 import '../downloads/download_service.dart';
+import '../iyol/iyol_deeplink.dart';
 import '../iyol/iyol_publish_service.dart';
 import '../library/playlist_picker_sheet.dart';
 import '../share/share_dialog.dart';
@@ -187,6 +188,18 @@ class TrackActionsSheet extends StatelessWidget {
                 objectType: track.objectType ?? 'm_track',
                 objectHash: track.objectHash ?? track.id,
               );
+            },
+          ),
+          _ActionTile(
+            icon: Icons.movie_creation_outlined,
+            label: 'Create Reel on IyolMe',
+            onTap: () async {
+              Navigator.of(context).pop();
+              final ok = await IyolDeepLink.openReelCreate(track);
+              if (!ok && rootContext.mounted) {
+                ScaffoldMessenger.of(rootContext).showSnackBar(const SnackBar(
+                    content: Text('Install IyolMe to create reels with this song')));
+              }
             },
           ),
           _ActionTile(

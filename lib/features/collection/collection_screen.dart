@@ -8,6 +8,7 @@ import 'package:just_audio/just_audio.dart';
 import '../../core/network/api_service.dart';
 import '../auth/auth_gate.dart';
 import '../downloads/download_service.dart';
+import '../iyol/iyol_deeplink.dart';
 import '../share/share_dialog.dart';
 import '../subscription/feature_gate.dart';
 import '../subscription/subscription_service.dart';
@@ -1657,6 +1658,24 @@ class _SpotifyTrackRow extends StatelessWidget {
                       objectHash: hash,
                     );
                   }
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.movie_creation_outlined, color: isDark ? Colors.white : Colors.black),
+                title: Text('Create Reel on IyolMe', style: TextStyle(color: isDark ? Colors.white : Colors.black)),
+                onTap: () async {
+                  Navigator.of(context).pop();
+                  final hash = trackHash ?? '';
+                  if (hash.isEmpty) return;
+                  await IyolDeepLink.openReelCreate(Track(
+                    id: hash,
+                    title: title,
+                    subtitle: subtitle,
+                    url: '',
+                    coverUrl: coverUrl,
+                    objectType: 'm_track',
+                    objectHash: hash,
+                  ));
                 },
               ),
               ListTile(
