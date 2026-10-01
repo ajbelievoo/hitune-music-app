@@ -30,7 +30,7 @@ class SearchService {
       endpoint: 'search',
       data: {
         'query': q,
-        'page': '2',
+        'page': '1',
         'ot': 'm_track',
       },
     );

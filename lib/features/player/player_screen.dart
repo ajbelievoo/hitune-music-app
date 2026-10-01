@@ -40,6 +40,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
   Uri? _videoUri;
   int _videoSetupGen = 0;
   bool _videoSetupInFlight = false;
+  int _videoFailCount = 0;
   Timer? _videoSyncTimer;
   final List<StreamSubscription<dynamic>> _subs = [];
   // Video only starts when the user opts in — a video stream downloads
@@ -230,6 +231,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
     // Record the target track + in-flight state BEFORE the first await so
     // repeat sourceType/track events for the same track don't spawn
     // parallel setups that keep disposing each other's controllers.
+    if (_videoTrackId != track.id) _videoFailCount = 0;
     _videoTrackId = track.id;
     _videoSetupInFlight = true;
     _videoSyncTimer?.cancel();
@@ -315,6 +317,11 @@ class _PlayerScreenState extends State<PlayerScreen> {
             await vc.dispose();
             return;
           }
+          // An audio-only stream (saavn mp4 / audio itag) initializes fine
+          // but has no video track — it would render a black surface.
+          if (vc.value.size.width <= 0 || vc.value.size.height <= 0) {
+            throw StateError('stream has no video track');
+          }
           // Audio comes from just_audio — the video surface is visual-only
           // or the muxed stream's audio double-plays on top of it.
           await vc.setVolume(0);
@@ -333,6 +340,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
             await vc.play();
           }
 
+          _videoFailCount = 0;
           _startVideoSync();
           if (mounted) setState(() {});
           return;
@@ -350,8 +358,10 @@ class _PlayerScreenState extends State<PlayerScreen> {
             continue;
           }
           // One delayed retry — a transient network/codec hiccup shouldn't
-          // leave the cover art stuck forever.
-          if (gen == _videoSetupGen && mounted && _isVideo) {
+          // leave the cover art stuck forever. Capped so a permanently
+          // audio-only stream doesn't retry forever.
+          _videoFailCount++;
+          if (gen == _videoSetupGen && mounted && _isVideo && _videoFailCount < 3) {
             Future.delayed(const Duration(seconds: 3), () {
               if (mounted &&
                   _isVideo &&

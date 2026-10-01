@@ -119,7 +119,7 @@ class BrowseFeedService {
     for (final query in queries) {
       final res = await _api.postPayloadRaw(
         endpoint: 'search',
-        data: {'query': query, 'page': '2', 'ot': 'm_track'},
+        data: {'query': query, 'page': '1', 'ot': 'm_track'},
       );
       if (!res.isSuccess || res.data == null) continue;
 

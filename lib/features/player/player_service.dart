@@ -1277,6 +1277,29 @@ class PlayerService {
     return result.url;
   }
 
+  /// Builds a clipped inline source for the Clips feed — reuses the same
+  /// resolution + header/caching pipeline as the main queue so signed and
+  /// CDN-gated URLs (googlevideo etc.) play correctly on a standalone
+  /// AudioPlayer.
+  Future<ClippingAudioSource?> clipSourceFor(
+    Track t, {
+    required int startSec,
+    required int durationSec,
+  }) async {
+    try {
+      final url = await _resolvePlayableUrl(t, preferred: _quality)
+          .timeout(const Duration(seconds: 15));
+      return ClippingAudioSource(
+        child: _toSource(t, url),
+        start: Duration(seconds: startSec),
+        end: Duration(seconds: startSec + durationSec),
+      );
+    } catch (e) {
+      _setError(e.toString());
+      return null;
+    }
+  }
+
   /// Appends [track] to the end of the queue. Returns false when the source
   /// could not be resolved so callers can surface a message.
   Future<bool> addToQueue(Track track) async {

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart';
 
 import '../../core/network/api_service.dart';
@@ -107,21 +108,24 @@ class _ClipsScreenState extends State<ClipsScreen> {
     } catch (_) {}
     if (mounted) setState(() => _clipLoading = true);
     try {
-      final url = await PlayerService.instance.resolveUrlFor(item.track);
-      if (!mounted || gen != _playGen) return;
-      await _clipPlayer.setAudioSource(
-        ClippingAudioSource(
-          child: AudioSource.uri(Uri.parse(url)),
-          start: Duration(seconds: item.start),
-          end: Duration(seconds: item.start + item.duration),
-        ),
+      // clipSourceFor reuses the main resolver — signed/CDN URLs get the
+      // required headers, nothing is guessed.
+      final source = await PlayerService.instance.clipSourceFor(
+        item.track,
+        startSec: item.start,
+        durationSec: item.duration,
       );
+      if (!mounted || gen != _playGen) return;
+      if (source == null) {
+        throw StateError(PlayerService.instance.lastError ?? 'no source');
+      }
+      await _clipPlayer.setAudioSource(source);
       if (!mounted || gen != _playGen) return;
       await _clipPlayer.play();
     } catch (e) {
       if (mounted && gen == _playGen) {
         ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Clip could not be played')));
+            SnackBar(content: Text('Clip could not be played: $e')));
       }
     } finally {
       if (mounted && gen == _playGen) setState(() => _clipLoading = false);
@@ -157,6 +161,7 @@ class _ClipsScreenState extends State<ClipsScreen> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
         title: const Text('Clips'),
       ),
       body: _error != null && _items.isEmpty

@@ -337,13 +337,13 @@ class _SearchScreenState extends State<SearchScreen> {
       _error = null;
     });
 
-    // NOTE: backend endpoint_search enforces page min=2 (bug/quirk),
+    // NOTE: endpoint paginates at LIMIT 10 — page 1 is the first result page.
     // so we send 2 as the first page to avoid validation failure.
     final res = await _api.postPayloadRaw(
       endpoint: 'search',
       data: {
         'query': q,
-        'page': '2',
+        'page': '1',
         if (_type != 'all') 'ot': _type,
       },
     );
