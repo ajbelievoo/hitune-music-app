@@ -155,7 +155,7 @@ class _DeveloperAppSheetState extends State<DeveloperAppSheet> {
           ),
           const SizedBox(height: 12),
           DropdownButtonFormField<String>(
-            initialValue: _platform,
+            value: _platform,
             dropdownColor: const Color(0xFF1B1B22),
             style: const TextStyle(color: Colors.white),
             decoration: _fieldDeco('Platform'),
