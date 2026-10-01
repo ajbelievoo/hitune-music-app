@@ -1290,15 +1290,30 @@ class PlayerService {
       final url = await _resolvePlayableUrl(t, preferred: _quality)
           .timeout(const Duration(seconds: 15));
       final uri = Uri.parse(url);
+      // just_audio_background casts every sequence source's tag to
+      // MediaItem for the notification — a null tag crashes it.
+      final cover = t.coverUrl;
+      final tag = MediaItem(
+        id: t.id,
+        title: t.title,
+        artist: t.subtitle,
+        artUri: (cover != null &&
+                cover.isNotEmpty &&
+                (cover.startsWith('http://') || cover.startsWith('https://')))
+            ? Uri.parse(cover)
+            : null,
+      );
       // Plain UriAudioSource — LockCachingAudioSource is a StreamAudioSource
       // and cannot be wrapped by ClippingAudioSource.
-      final base = AudioSource.uri(uri, headers: _sourceHeaders(uri));
+      final base =
+          AudioSource.uri(uri, headers: _sourceHeaders(uri), tag: tag);
       // HLS playlists can't be windowed by ClippingAudioSource.
       if (url.contains('.m3u8')) return base;
       return ClippingAudioSource(
         child: base,
         start: Duration(seconds: startSec),
         end: Duration(seconds: startSec + durationSec),
+        tag: tag,
       );
     } catch (e) {
       _setError(e.toString());
