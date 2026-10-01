@@ -128,3 +128,11 @@ flutter analyze --no-pub
 - Several UI screens still hardcode colors instead of using `Theme.of(context).colorScheme`.
 - Casting (`CastService`) and store IAP (`PurchaseService`) are facades pending native SDK / store-product wiring.
 - `withOpacity` deprecation warnings remain in some screens; the most frequently used files have been migrated to `withValues`.
+
+### APK deploy cache-busting
+
+- `hitune.in` is behind Cloudflare which caches `/hitune-music.apk` for ~4h —
+  after deploying a new APK, update the `?v=<sha8>` query in the index.html
+  download link so every PoP fetches a fresh copy. nginx serves that URL with
+  `Cache-Control: no-cache` via
+  `/www/server/panel/vhost/nginx/extension/hitune.in/apk.conf`.
