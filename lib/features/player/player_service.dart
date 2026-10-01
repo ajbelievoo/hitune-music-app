@@ -1277,11 +1277,12 @@ class PlayerService {
     return result.url;
   }
 
-  /// Appends [track] to the end of the queue.
-  Future<void> addToQueue(Track track) async {
+  /// Appends [track] to the end of the queue. Returns false when the source
+  /// could not be resolved so callers can surface a message.
+  Future<bool> addToQueue(Track track) async {
     if (_queue.isEmpty) {
       await playTrack(track);
-      return;
+      return _lastError == null;
     }
     track = _trackWithCover(track);
     try {
@@ -1289,16 +1290,18 @@ class PlayerService {
       _queue = [..._queue, track];
       await _syncPlaylistOp(() => _playlist.add(_toSource(track, url)));
       _queueController.add(List<Track>.from(_queue));
+      return true;
     } catch (e) {
       _setError(e.toString());
+      return false;
     }
   }
 
   /// Inserts [track] right after the current track.
-  Future<void> playNext(Track track) async {
+  Future<bool> playNext(Track track) async {
     if (_queue.isEmpty) {
       await playTrack(track);
-      return;
+      return _lastError == null;
     }
     track = _trackWithCover(track);
     try {
@@ -1310,8 +1313,10 @@ class PlayerService {
           insertAt.clamp(0, _playlist.children.length),
           _toSource(track, url)));
       _queueController.add(List<Track>.from(_queue));
+      return true;
     } catch (e) {
       _setError(e.toString());
+      return false;
     }
   }
 

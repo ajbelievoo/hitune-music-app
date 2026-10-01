@@ -166,51 +166,46 @@ class _AppShellState extends State<AppShell> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      body: Stack(
+      body: SafeArea(
+        bottom: false,
+        child: IndexedStack(
+          index: _index,
+          children: _pages,
+        ),
+      ),
+      // Bottom bars live in the scaffold slot (not an overlay Stack) so page
+      // content is never painted underneath them — lists can scroll fully.
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          SafeArea(
-            bottom: false,
-            child: IndexedStack(
-              index: _index,
-              children: _pages,
+          const OfflineBanner(),
+          MiniPlayer(player: player),
+          Container(
+            decoration: BoxDecoration(
+              color: theme.colorScheme.surface.withValues(alpha: 0.95),
+              border: Border(top: BorderSide(color: theme.dividerColor)),
             ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const OfflineBanner(),
-                MiniPlayer(player: player),
-                Container(
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.surface.withValues(alpha: 0.95),
-                    border: Border(top: BorderSide(color: theme.dividerColor)),
-                  ),
-                  child: NavigationBar(
-                    selectedIndex: _index,
-                    backgroundColor: Colors.transparent,
-                    elevation: 0,
-                    onDestinationSelected: (i) async {
-                      if (i == 3) {
-                        final ok = await AuthGate.ensureLoggedIn(
-                          context,
-                          reason: 'Login required to open Your Library.',
-                        );
-                        if (!ok) return;
-                      }
-                      if (!mounted) return;
-                      setState(() => _index = i);
-                    },
-                    destinations: [
-                      NavigationDestination(icon: const Icon(Icons.home_outlined), selectedIcon: const Icon(Icons.home_rounded), label: L10n.t('nav_listen_now')),
-                      NavigationDestination(icon: const Icon(Icons.grid_view_outlined), selectedIcon: const Icon(Icons.grid_view_rounded), label: L10n.t('nav_browse')),
-                      NavigationDestination(icon: const Icon(Icons.radio_outlined), selectedIcon: const Icon(Icons.radio_rounded), label: L10n.t('nav_radio')),
-                      NavigationDestination(icon: const Icon(Icons.library_music_outlined), selectedIcon: const Icon(Icons.library_music_rounded), label: L10n.t('nav_library')),
-                      NavigationDestination(icon: const Icon(Icons.search_outlined), selectedIcon: const Icon(Icons.search_rounded), label: L10n.t('nav_search')),
-                    ],
-                  ),
-                ),
+            child: NavigationBar(
+              selectedIndex: _index,
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              onDestinationSelected: (i) async {
+                if (i == 3) {
+                  final ok = await AuthGate.ensureLoggedIn(
+                    context,
+                    reason: 'Login required to open Your Library.',
+                  );
+                  if (!ok) return;
+                }
+                if (!mounted) return;
+                setState(() => _index = i);
+              },
+              destinations: [
+                NavigationDestination(icon: const Icon(Icons.home_outlined), selectedIcon: const Icon(Icons.home_rounded), label: L10n.t('nav_listen_now')),
+                NavigationDestination(icon: const Icon(Icons.grid_view_outlined), selectedIcon: const Icon(Icons.grid_view_rounded), label: L10n.t('nav_browse')),
+                NavigationDestination(icon: const Icon(Icons.radio_outlined), selectedIcon: const Icon(Icons.radio_rounded), label: L10n.t('nav_radio')),
+                NavigationDestination(icon: const Icon(Icons.library_music_outlined), selectedIcon: const Icon(Icons.library_music_rounded), label: L10n.t('nav_library')),
+                NavigationDestination(icon: const Icon(Icons.search_outlined), selectedIcon: const Icon(Icons.search_rounded), label: L10n.t('nav_search')),
               ],
             ),
           ),

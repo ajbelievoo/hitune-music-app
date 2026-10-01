@@ -34,19 +34,30 @@ class _ClipsScreenState extends State<ClipsScreen> {
   bool _done = false;
   String? _error;
   int _current = 0;
-  StreamSubscription<Duration>? _posSub;
-  StreamSubscription<ProcessingState>? _readySub;
+
+  /// Dedicated inline player — clips must NOT go through the shared
+  /// [PlayerService] queue (that would surface them in the mini/full MP3
+  /// player). Resolved via PlayerService.resolveUrlFor, played clipped.
+  final AudioPlayer _clipPlayer = AudioPlayer();
+  int _playGen = 0;
+  bool _clipLoading = false;
+  StreamSubscription<PlayerState>? _stateSub;
 
   @override
   void initState() {
     super.initState();
+    _clipPlayer.setLoopMode(LoopMode.one);
+    // Rebuild the card's play/pause icon as the clip player state changes.
+    _stateSub = _clipPlayer.playerStateStream.listen((_) {
+      if (mounted) setState(() {});
+    });
     _load();
   }
 
   @override
   void dispose() {
-    _posSub?.cancel();
-    _readySub?.cancel();
+    _stateSub?.cancel();
+    _clipPlayer.dispose();
     _pageCtrl.dispose();
     super.dispose();
   }
@@ -89,35 +100,32 @@ class _ClipsScreenState extends State<ClipsScreen> {
   Future<void> _playAt(int index) async {
     if (index < 0 || index >= _items.length) return;
     final item = _items[index];
-    _posSub?.cancel();
-    _readySub?.cancel();
+    final gen = ++_playGen;
+    // Pause whatever the main player is doing so streams never overlap.
     try {
-      await PlayerService.instance.playTrack(item.track);
+      await PlayerService.instance.audioPlayer.pause();
+    } catch (_) {}
+    if (mounted) setState(() => _clipLoading = true);
+    try {
+      final url = await PlayerService.instance.resolveUrlFor(item.track);
+      if (!mounted || gen != _playGen) return;
+      await _clipPlayer.setAudioSource(
+        ClippingAudioSource(
+          child: AudioSource.uri(Uri.parse(url)),
+          start: Duration(seconds: item.start),
+          end: Duration(seconds: item.start + item.duration),
+        ),
+      );
+      if (!mounted || gen != _playGen) return;
+      await _clipPlayer.play();
     } catch (e) {
-      if (mounted) {
+      if (mounted && gen == _playGen) {
         ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Clip could not be played')));
       }
-      return;
+    } finally {
+      if (mounted && gen == _playGen) setState(() => _clipLoading = false);
     }
-    if (!mounted) return;
-    // Seek into the clip window only after the source is actually loaded —
-    // seeking before setAudioSource completes is silently dropped.
-    var seeked = false;
-    _readySub = PlayerService.instance.audioPlayer.processingStateStream
-        .listen((st) {
-      if (st == ProcessingState.ready && !seeked) {
-        seeked = true;
-        PlayerService.instance.audioPlayer
-            .seek(Duration(seconds: item.start));
-      }
-    });
-    _posSub = PlayerService.instance.positionStream.listen((pos) {
-      final end = item.start + item.duration;
-      if (pos.inSeconds >= end) {
-        PlayerService.instance.audioPlayer.seek(Duration(seconds: item.start));
-      }
-    });
   }
 
   Future<void> _publishReel(_ClipItem item) async {
@@ -137,10 +145,9 @@ class _ClipsScreenState extends State<ClipsScreen> {
   }
 
   void _openFull(_ClipItem item) {
-    _posSub?.cancel();
-    _readySub?.cancel();
+    _playGen++;
+    _clipPlayer.stop();
     PlayerService.instance.playTrack(item.track);
-    PlayerService.instance.audioPlayer.seek(Duration.zero);
     Navigator.of(context).maybePop();
   }
 
@@ -170,10 +177,27 @@ class _ClipsScreenState extends State<ClipsScreen> {
                       return const Center(child: CircularProgressIndicator());
                     }
                     final item = _items[i];
+                    final isCurrent = i == _current;
                     return _ClipCard(
                       item: item,
-                      active: i == _current,
-                      onPlayClip: () => _playAt(i),
+                      active: isCurrent,
+                      clipPlaying: isCurrent &&
+                          !_clipLoading &&
+                          _clipPlayer.playing,
+                      clipLoading: isCurrent && _clipLoading,
+                      onPlayClip: () {
+                        if (isCurrent && _clipPlayer.playing) {
+                          _clipPlayer.pause();
+                        } else if (isCurrent &&
+                            _clipPlayer.audioSource != null &&
+                            _clipPlayer.processingState ==
+                                ProcessingState.ready) {
+                          _clipPlayer.play();
+                        } else {
+                          _playAt(i);
+                        }
+                        setState(() {});
+                      },
                       onOpenFull: () => _openFull(item),
                       onPublishReel: () => _publishReel(item),
                     );
@@ -219,6 +243,8 @@ class _ClipItem {
 class _ClipCard extends StatelessWidget {
   final _ClipItem item;
   final bool active;
+  final bool clipPlaying;
+  final bool clipLoading;
   final VoidCallback onOpenFull;
   final VoidCallback onPublishReel;
   final VoidCallback onPlayClip;
@@ -226,6 +252,8 @@ class _ClipCard extends StatelessWidget {
   const _ClipCard({
     required this.item,
     required this.active,
+    required this.clipPlaying,
+    required this.clipLoading,
     required this.onOpenFull,
     required this.onPublishReel,
     required this.onPlayClip,
@@ -242,7 +270,19 @@ class _ClipCard extends StatelessWidget {
           lookupTitle: t.title,
           lookupSubtitle: t.subtitle,
           fit: BoxFit.cover,
-          placeholder: Container(color: const Color(0xFF101018)),
+          placeholder: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Color(0xFF1B1B2E), Color(0xFF0A0A14)],
+              ),
+            ),
+            child: const Center(
+              child: Icon(Icons.music_note_rounded,
+                  color: Colors.white24, size: 96),
+            ),
+          ),
         ),
         Container(
           decoration: const BoxDecoration(
@@ -290,8 +330,19 @@ class _ClipCard extends StatelessWidget {
           child: Column(
             children: [
               IconButton(
-                icon: const Icon(Icons.play_circle_fill, color: Colors.white, size: 34),
-                tooltip: 'Play clip',
+                icon: clipLoading
+                    ? const SizedBox(
+                        width: 26,
+                        height: 26,
+                        child: CircularProgressIndicator(
+                            strokeWidth: 2, color: Colors.white))
+                    : Icon(
+                        clipPlaying
+                            ? Icons.pause_circle_filled
+                            : Icons.play_circle_fill,
+                        color: Colors.white,
+                        size: 34),
+                tooltip: clipPlaying ? 'Pause clip' : 'Play clip',
                 onPressed: onPlayClip,
               ),
               const SizedBox(height: 8),

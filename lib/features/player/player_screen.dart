@@ -682,7 +682,14 @@ class _PlayerScreenState extends State<PlayerScreen> {
     final darkTheme = ThemeService.darkTheme;
     return Theme(
       data: darkTheme,
-      child: Scaffold(
+      child: GestureDetector(
+        // Swipe down anywhere on the player minimizes it back to the mini bar.
+        onVerticalDragEnd: (d) {
+          if ((d.primaryVelocity ?? 0) > 400) {
+            Navigator.of(context).maybePop();
+          }
+        },
+        child: Scaffold(
         backgroundColor: darkTheme.scaffoldBackgroundColor,
         body: StreamBuilder(
           stream: player.currentTrackStream,
@@ -1142,6 +1149,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
             ],
           );
         },
+        ),
         ),
       ),
     );

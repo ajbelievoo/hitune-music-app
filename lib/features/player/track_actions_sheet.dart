@@ -119,7 +119,15 @@ class TrackActionsSheet extends StatelessWidget {
             onTap: () async {
               Navigator.of(context).pop();
               final ok = await AuthGate.ensureLoggedIn(rootContext, reason: 'Login required to manage the queue.');
-              if (ok) await player.playNext(track);
+              if (!ok || !rootContext.mounted) return;
+              final messenger = ScaffoldMessenger.of(rootContext);
+              messenger.showSnackBar(const SnackBar(content: Text('Adding...')));
+              final done = await player.playNext(track);
+              if (!rootContext.mounted) return;
+              messenger.hideCurrentSnackBar();
+              messenger.showSnackBar(SnackBar(
+                content: Text(done ? 'Will play next' : 'Could not add: ${player.lastError ?? 'source unavailable'}'),
+              ));
             },
           ),
           _ActionTile(
@@ -128,7 +136,15 @@ class TrackActionsSheet extends StatelessWidget {
             onTap: () async {
               Navigator.of(context).pop();
               final ok = await AuthGate.ensureLoggedIn(rootContext, reason: 'Login required to manage the queue.');
-              if (ok) await player.addToQueue(track);
+              if (!ok || !rootContext.mounted) return;
+              final messenger = ScaffoldMessenger.of(rootContext);
+              messenger.showSnackBar(const SnackBar(content: Text('Adding...')));
+              final done = await player.addToQueue(track);
+              if (!rootContext.mounted) return;
+              messenger.hideCurrentSnackBar();
+              messenger.showSnackBar(SnackBar(
+                content: Text(done ? 'Added to queue' : 'Could not add: ${player.lastError ?? 'source unavailable'}'),
+              ));
             },
           ),
           _ActionTile(
