@@ -338,7 +338,6 @@ class _SearchScreenState extends State<SearchScreen> {
     });
 
     // NOTE: endpoint paginates at LIMIT 10 — page 1 is the first result page.
-    // so we send 2 as the first page to avoid validation failure.
     final res = await _api.postPayloadRaw(
       endpoint: 'search',
       data: {

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:video_player/video_player.dart';
 
 import '../../core/network/api_service.dart';
 import '../../core/ui/ai_badge.dart';
@@ -44,6 +45,14 @@ class _ClipsScreenState extends State<ClipsScreen> {
   bool _clipLoading = false;
   StreamSubscription<PlayerState>? _stateSub;
 
+  /// Inline video surface — when the resolver finds a real video rendition
+  /// for the clip's track the card plays it reels-style (window-looped),
+  /// otherwise the card falls back to cover art + clipped audio.
+  VideoPlayerController? _clipVideo;
+  bool _clipVideoReady = false;
+  int _videoWinStart = 0;
+  int _videoWinEnd = 0;
+
   @override
   void initState() {
     super.initState();
@@ -58,9 +67,84 @@ class _ClipsScreenState extends State<ClipsScreen> {
   @override
   void dispose() {
     _stateSub?.cancel();
+    _clipVideo?.dispose();
     _clipPlayer.dispose();
     _pageCtrl.dispose();
     super.dispose();
+  }
+
+  Future<void> _disposeClipVideo() async {
+    _clipVideoReady = false;
+    final vc = _clipVideo;
+    _clipVideo = null;
+    if (vc != null) await vc.dispose();
+  }
+
+  /// Same headers the main player sends — googlevideo 403s the default UA.
+  Map<String, String> _clipVideoHeaders(Uri uri) {
+    final host = uri.host;
+    if (host.contains('googlevideo') ||
+        host.endsWith('youtube.com') ||
+        host.endsWith('youtu.be')) {
+      return const {
+        'User-Agent':
+            'com.google.android.youtube/19.09.37 (Linux; U; Android 14) gzip',
+        'Referer': 'https://www.youtube.com/',
+      };
+    }
+    return const {};
+  }
+
+  /// Tries to play the clip as a windowed video. Returns true when a real
+  /// video stream initialized; false means "use the audio-only fallback".
+  Future<bool> _startClipVideo(String url, _ClipItem item, int gen) async {
+    final uri = Uri.tryParse(url);
+    if (uri == null) return false;
+    final vc = VideoPlayerController.networkUrl(uri,
+        httpHeaders: _clipVideoHeaders(uri));
+    try {
+      await vc.initialize().timeout(const Duration(seconds: 15));
+      if (!mounted || gen != _playGen) {
+        await vc.dispose();
+        return false;
+      }
+      // Audio-only streams (saavn mp4 / audio itag) init fine but render
+      // black — reject them so the cover fallback kicks in.
+      if (vc.value.size.width <= 0 || vc.value.size.height <= 0) {
+        await vc.dispose();
+        return false;
+      }
+      _videoWinStart = item.start;
+      _videoWinEnd = item.start + item.duration;
+      var wasPlaying = vc.value.isPlaying;
+      // Loop the clip window: when playback passes the end, jump back.
+      vc.addListener(() {
+        if (!vc.value.isInitialized) return;
+        final pos = vc.value.position.inMilliseconds;
+        if (_videoWinEnd > 0 && pos >= _videoWinEnd * 1000) {
+          vc.seekTo(Duration(seconds: _videoWinStart));
+        }
+        // Rebuild only on play-state flips — position ticks are too hot.
+        if (vc.value.isPlaying != wasPlaying) {
+          wasPlaying = vc.value.isPlaying;
+          if (mounted) setState(() {});
+        }
+      });
+      // just_audio is the audio clock — mute the surface so a muxed
+      // stream's own track never double-plays.
+      await vc.setVolume(0);
+      await vc.seekTo(Duration(seconds: _videoWinStart));
+      await vc.play();
+      _clipVideo = vc;
+      _clipVideoReady = true;
+      if (mounted) setState(() {});
+      return true;
+    } catch (_) {
+      try {
+        await vc.dispose();
+      } catch (_) {}
+      return false;
+    }
   }
 
   Future<void> _load() async {
@@ -107,6 +191,8 @@ class _ClipsScreenState extends State<ClipsScreen> {
       await PlayerService.instance.audioPlayer.pause();
     } catch (_) {}
     if (mounted) setState(() => _clipLoading = true);
+    await _disposeClipVideo();
+    if (!mounted || gen != _playGen) return;
     try {
       // clipSourceFor reuses the main resolver — signed/CDN URLs get the
       // required headers, nothing is guessed.
@@ -122,6 +208,13 @@ class _ClipsScreenState extends State<ClipsScreen> {
       await _clipPlayer.setAudioSource(source);
       if (!mounted || gen != _playGen) return;
       await _clipPlayer.play();
+      // Resolution populated video candidates for YouTube/video tracks —
+      // attach one as a muted visual over the clipped audio (same pattern
+      // as the Now Playing video mode; just_audio stays the audio clock).
+      final vUrl = PlayerService.instance.pickVideoUrl(item.track.id);
+      if (vUrl != null && vUrl.isNotEmpty) {
+        await _startClipVideo(vUrl, item, gen);
+      }
     } catch (e) {
       if (mounted && gen == _playGen) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -150,6 +243,7 @@ class _ClipsScreenState extends State<ClipsScreen> {
 
   void _openFull(_ClipItem item) {
     _playGen++;
+    _disposeClipVideo();
     _clipPlayer.stop();
     PlayerService.instance.playTrack(item.track);
     Navigator.of(context).maybePop();
@@ -186,12 +280,20 @@ class _ClipsScreenState extends State<ClipsScreen> {
                     return _ClipCard(
                       item: item,
                       active: isCurrent,
+                      videoController:
+                          isCurrent && _clipVideoReady ? _clipVideo : null,
                       clipPlaying: isCurrent &&
                           !_clipLoading &&
-                          _clipPlayer.playing,
+                          (_clipVideoReady
+                              ? (_clipVideo?.value.isPlaying ?? false)
+                              : _clipPlayer.playing),
                       clipLoading: isCurrent && _clipLoading,
                       onPlayClip: () {
-                        if (isCurrent && _clipPlayer.playing) {
+                        if (isCurrent && _clipVideoReady && _clipVideo != null) {
+                          _clipVideo!.value.isPlaying
+                              ? _clipVideo!.pause()
+                              : _clipVideo!.play();
+                        } else if (isCurrent && _clipPlayer.playing) {
                           _clipPlayer.pause();
                         } else if (isCurrent &&
                             _clipPlayer.audioSource != null &&
@@ -250,6 +352,7 @@ class _ClipCard extends StatelessWidget {
   final bool active;
   final bool clipPlaying;
   final bool clipLoading;
+  final VideoPlayerController? videoController;
   final VoidCallback onOpenFull;
   final VoidCallback onPublishReel;
   final VoidCallback onPlayClip;
@@ -259,6 +362,7 @@ class _ClipCard extends StatelessWidget {
     required this.active,
     required this.clipPlaying,
     required this.clipLoading,
+    required this.videoController,
     required this.onOpenFull,
     required this.onPublishReel,
     required this.onPlayClip,
@@ -267,10 +371,23 @@ class _ClipCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = item.track;
+    final vc = videoController;
+    final hasVideo =
+        vc != null && vc.value.isInitialized && vc.value.size.width > 0;
     return Stack(
       fit: StackFit.expand,
       children: [
-        CoverImage(
+        if (hasVideo)
+          FittedBox(
+            fit: BoxFit.cover,
+            child: SizedBox(
+              width: vc.value.size.width,
+              height: vc.value.size.height,
+              child: VideoPlayer(vc),
+            ),
+          )
+        else
+          CoverImage(
           imageUrl: t.coverUrl,
           lookupTitle: t.title,
           lookupSubtitle: t.subtitle,
