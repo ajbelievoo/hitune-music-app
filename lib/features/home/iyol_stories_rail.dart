@@ -26,7 +26,8 @@ class IyolStoriesRail extends StatelessWidget {
       future: _fetch(),
       builder: (context, snap) {
         final stories = snap.data ?? const <Map<String, dynamic>>[];
-        if (stories.isEmpty) return const SizedBox.shrink();
+        // Always render — the leading "Your story" circle lets the user
+        // post to IyolMe even when the feed has no stories yet.
 
         final theme = Theme.of(context);
         return Column(
@@ -64,14 +65,54 @@ class IyolStoriesRail extends StatelessWidget {
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                itemCount: stories.length,
+                itemCount: stories.length + 1,
                 separatorBuilder: (_, __) => const SizedBox(width: 14),
-                itemBuilder: (context, i) => _StoryCircle(story: stories[i]),
+                itemBuilder: (context, i) => i == 0
+                    ? const _AddStoryCircle()
+                    : _StoryCircle(story: stories[i - 1]),
               ),
             ),
           ],
         );
       },
+    );
+  }
+}
+
+/// Leading "+" circle — deep-links into IyolMe's story camera.
+class _AddStoryCircle extends StatelessWidget {
+  const _AddStoryCircle();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return InkWell(
+      borderRadius: BorderRadius.circular(40),
+      onTap: () => IyolDeepLink.openStoryCreate(),
+      child: SizedBox(
+        width: 68,
+        child: Column(
+          children: [
+            Container(
+              width: 62,
+              height: 62,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.25),
+                  width: 1.5,
+                ),
+              ),
+              child: const Icon(Icons.add_rounded, size: 30),
+            ),
+            const SizedBox(height: 4),
+            Text('Your story',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: theme.textTheme.labelSmall),
+          ],
+        ),
+      ),
     );
   }
 }

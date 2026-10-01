@@ -28,6 +28,7 @@ import '../subscription/subscription_service.dart';
 import '../developer/developer_screen.dart';
 import '../developer/developer_service.dart';
 import '../iyol/iyol_deeplink.dart';
+import '../../core/network/api_service.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -363,6 +364,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ),
                             const SizedBox(width: 12),
+                            OutlinedButton(
+                              onPressed: () => _openEditProfile(context),
+                              style: OutlinedButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 13),
+                                side: BorderSide(
+                                    color: Theme.of(context)
+                                        .iconTheme
+                                        .color!
+                                        .withValues(alpha: 0.3)),
+                              ),
+                              child: const Icon(Icons.settings_outlined, size: 20),
+                            ),
+                            const SizedBox(width: 12),
                             Expanded(
                               child: OutlinedButton.icon(
                                 onPressed: () {
@@ -499,7 +513,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             mode: LaunchMode.externalApplication)),
                           _MenuItem(Icons.workspace_premium, 'Upgrade Plans', _brandGold, () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const UpgradePlansScreen()))),
                           _MenuItem(Icons.devices_outlined, 'Sessions', _brandCyan, () => SessionsScreen.openWithAuth(context)),
-                          _MenuItem(Icons.video_library_outlined, 'IyolMe Reels', _brandPink, () => IyolDeepLink.openApp()),
+                          _MenuItem(Icons.video_library_outlined, 'IyolMe Reels', _brandPink, () => IyolDeepLink.openApp(), subtitle: const _IyolLinkStatus()),
                           _MenuItem(Icons.apps_outage, 'Other Apps', _brandPink, () {
                             Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OtherProjectsScreen()));
                           }),
@@ -873,6 +887,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       item.title,
                       style: TextStyle(color: (isDark ? Colors.white : Colors.black).withValues(alpha: 0.9), fontWeight: FontWeight.w600),
                     ),
+                    subtitle: item.subtitle,
                     trailing: Icon(Icons.chevron_right, color: (isDark ? Colors.white : Colors.black).withValues(alpha: 0.4)),
                     onTap: item.onTap,
                   ),
@@ -1083,8 +1098,84 @@ class _MenuItem {
   final String title;
   final Color color;
   final VoidCallback onTap;
+  final Widget? subtitle;
 
-  const _MenuItem(this.icon, this.title, this.color, this.onTap);
+  const _MenuItem(this.icon, this.title, this.color, this.onTap, {this.subtitle});
+}
+
+/// Subtitle under the "IyolMe Reels" menu row — asks the backend whether
+/// this HiTune account is linked to an IyolMe account and shows
+/// "Connected · @user" or "Not linked".
+class _IyolLinkStatus extends StatefulWidget {
+  const _IyolLinkStatus();
+
+  @override
+  State<_IyolLinkStatus> createState() => _IyolLinkStatusState();
+}
+
+class _IyolLinkStatusState extends State<_IyolLinkStatus> {
+  late final Future<Map<String, dynamic>?> _future = _load();
+
+  Future<Map<String, dynamic>?> _load() async {
+    try {
+      final res =
+          await ApiService.instance.postPayloadRaw(endpoint: 'iyol_status');
+      return res.isSuccess ? res.data : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<Map<String, dynamic>?>(
+      future: _future,
+      builder: (context, snap) {
+        if (!snap.hasData) return const SizedBox.shrink();
+        final data = snap.data!;
+        final linked = data['linked'] == true;
+        final uname = (data['iyol_username'] ?? '').toString();
+        final label = linked
+            ? 'Connected · @${uname.isNotEmpty ? uname : data['hitune_username'] ?? 'iyolme'}'
+            : 'Tap to open IyolMe — auto-links on first share';
+        return Padding(
+          padding: const EdgeInsets.only(top: 2),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                linked ? Icons.check_circle : Icons.link_off,
+                size: 12,
+                color: linked
+                    ? Colors.greenAccent
+                    : Theme.of(context)
+                        .colorScheme
+                        .onSurface
+                        .withValues(alpha: 0.45),
+              ),
+              const SizedBox(width: 4),
+              Flexible(
+                child: Text(
+                  label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 11,
+                    color: linked
+                        ? Colors.greenAccent
+                        : Theme.of(context)
+                            .colorScheme
+                            .onSurface
+                            .withValues(alpha: 0.55),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
 }
 
 /// Small pill used under the profile name for role / plan labels.

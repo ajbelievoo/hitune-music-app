@@ -57,6 +57,18 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
   // Sessions
   List<dynamic> _sessions = [];
 
+
+  /* ---- theme-aware palette (screen follows app light/dark theme) ---- */
+  bool get _isDark => Theme.of(context).brightness == Brightness.dark;
+  Color get _bg => _isDark ? Colors.black : const Color(0xFFF7F7F9);
+  Color get _surface => _isDark ? const Color(0xFF1C1C22) : Colors.white;
+  Color get _cardBg => _isDark ? Colors.white.withValues(alpha: 0.05) : Colors.black.withValues(alpha: 0.04);
+  Color get _cardBg2 => _isDark ? Colors.white.withValues(alpha: 0.03) : Colors.black.withValues(alpha: 0.03);
+  Color get _border => _isDark ? Colors.white.withValues(alpha: 0.1) : Colors.black.withValues(alpha: 0.12);
+  Color get _fg => _isDark ? Colors.white : const Color(0xFF101018);
+  Color get _fgSub => _isDark ? Colors.white.withValues(alpha: 0.6) : Colors.black.withValues(alpha: 0.62);
+  Color get _fgMid => _isDark ? Colors.white.withValues(alpha: 0.5) : Colors.black.withValues(alpha: 0.45);
+
   // Transactions
   Map<String, dynamic>? _transactionData;
 
@@ -709,11 +721,11 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
       context: context,
       barrierDismissible: false,
       builder: (ctx) => AlertDialog(
-        backgroundColor: Colors.grey[900],
-        title: const Text('Session Expired', style: TextStyle(color: Colors.white)),
-        content: const Text(
+        backgroundColor: _surface,
+        title: Text('Session Expired', style: TextStyle(color: _fg)),
+        content: Text(
           'Your session has expired. Please login again to continue.',
-          style: TextStyle(color: Colors.white70),
+          style: TextStyle(color: _fgSub),
         ),
         actions: [
           TextButton(
@@ -731,15 +743,15 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: _bg,
       appBar: AppBar(
         title: const Text('Settings'),
-        backgroundColor: Colors.black,
+        backgroundColor: _bg,
         bottom: TabBar(
           controller: _tabCtrl,
           isScrollable: true,
-          labelColor: Colors.white,
-          unselectedLabelColor: Colors.white.withValues(alpha: 0.5),
+          labelColor: _fg,
+          unselectedLabelColor: _fgMid,
           indicatorColor: Colors.blueAccent,
           tabs: const [
             Tab(text: 'Profile'),
@@ -794,7 +806,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
             width: double.infinity,
             child: FilledButton.icon(
               onPressed: _loading ? null : _submitProfile,
-              icon: _loading ? const SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Icon(Icons.save),
+              icon: _loading ? SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: _fg)) : Icon(Icons.save),
               label: Text(_loading ? 'Saving...' : 'Save Profile'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
@@ -839,8 +851,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
           const SizedBox(height: 16),
           _buildSectionTitle('Social Login'),
           SwitchListTile(
-            title: const Text('Enable Social Login', style: TextStyle(color: Colors.white)),
-            subtitle: const Text('Allow social login with same email', style: TextStyle(color: Colors.white70, fontSize: 12)),
+            title: Text('Enable Social Login', style: TextStyle(color: _fg)),
+            subtitle: Text('Allow social login with same email', style: TextStyle(color: _fgSub, fontSize: 12)),
             value: _socialLoginEnabled,
             onChanged: (v) => setState(() => _socialLoginEnabled = v),
             activeColor: Colors.blueAccent,
@@ -850,7 +862,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
             width: double.infinity,
             child: FilledButton.icon(
               onPressed: _loading ? null : _submitSecurity,
-              icon: _loading ? const SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Icon(Icons.save),
+              icon: _loading ? SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: _fg)) : Icon(Icons.save),
               label: Text(_loading ? 'Saving...' : 'Save Security Settings'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
@@ -879,9 +891,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.05),
+              color: _cardBg,
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
+              border: Border.all(color: _border),
             ),
             child: Row(
               children: [
@@ -891,8 +903,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Your Funds', style: TextStyle(color: Colors.white.withValues(alpha: 0.7), fontSize: 14)),
-                      Text('\$${funds.toStringAsFixed(2)}', style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold)),
+                      Text('Your Funds', style: TextStyle(color: _fgSub, fontSize: 14)),
+                      Text('\$${funds.toStringAsFixed(2)}', style: TextStyle(color: _fg, fontSize: 28, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
@@ -918,7 +930,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
             Center(
               child: Padding(
                 padding: const EdgeInsets.all(32),
-                child: Text('No transactions yet', style: TextStyle(color: Colors.white.withValues(alpha: 0.5))),
+                child: Text('No transactions yet', style: TextStyle(color: _fgMid)),
               ),
             )
           else
@@ -947,9 +959,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.03),
+        color: _cardBg2,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
+        border: Border.all(color: _border),
       ),
       child: Row(
         children: [
@@ -972,16 +984,16 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
                 color: Colors.grey[800],
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: const Icon(Icons.music_note, color: Colors.white54),
+              child: Icon(Icons.music_note, color: _fgMid),
             ),
           const SizedBox(width: 12),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(type.toUpperCase(), style: TextStyle(color: Colors.white.withValues(alpha: 0.7), fontSize: 12)),
+                Text(type.toUpperCase(), style: TextStyle(color: _fgSub, fontSize: 12)),
                 if (item != null)
-                  Text(item['title'] ?? 'Unknown', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                  Text(item['title'] ?? 'Unknown', style: TextStyle(color: _fg, fontWeight: FontWeight.w600)),
               ],
             ),
           ),
@@ -1009,13 +1021,13 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
         children: [
           _buildSectionTitle('Email Notifications'),
           SwitchListTile(
-            title: const Text('Enable email notifications', style: TextStyle(color: Colors.white)),
-            subtitle: const Text('Receive notifications via email', style: TextStyle(color: Colors.white70, fontSize: 12)),
+            title: Text('Enable email notifications', style: TextStyle(color: _fg)),
+            subtitle: Text('Receive notifications via email', style: TextStyle(color: _fgSub, fontSize: 12)),
             value: _emailNotifications,
             onChanged: (v) => setState(() => _emailNotifications = v),
             activeColor: Colors.blueAccent,
           ),
-          const Divider(color: Colors.white24),
+          Divider(color: _border),
           _buildSectionTitle('Notification Types'),
           const SizedBox(height: 8),
           ..._notificationInputs.entries.map((entry) {
@@ -1026,8 +1038,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
             final currentValue = _notificationValues[key] ?? false;
             debugPrint('[NOTIFICATIONS_TOGGLE] Building switch for $key, value: $currentValue');
             return SwitchListTile(
-              title: Text(label, style: const TextStyle(color: Colors.white, fontSize: 14)),
-              subtitle: tip.isNotEmpty ? Text(tip, style: TextStyle(color: Colors.white.withValues(alpha: 0.6), fontSize: 12)) : null,
+              title: Text(label, style: TextStyle(color: _fg, fontSize: 14)),
+              subtitle: tip.isNotEmpty ? Text(tip, style: TextStyle(color: _fgSub, fontSize: 12)) : null,
               value: currentValue,
               onChanged: (v) {
                 debugPrint('[NOTIFICATIONS_TOGGLE] $key changed from $currentValue to $v');
@@ -1041,7 +1053,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
             width: double.infinity,
             child: FilledButton.icon(
               onPressed: _loading ? null : _submitNotifications,
-              icon: _loading ? const SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Icon(Icons.save),
+              icon: _loading ? SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: _fg)) : Icon(Icons.save),
               label: Text(_loading ? 'Saving...' : 'Save Preferences'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
@@ -1078,7 +1090,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
             width: double.infinity,
             child: FilledButton.icon(
               onPressed: _loading ? null : _submitLinks,
-              icon: _loading ? const SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Icon(Icons.save),
+              icon: _loading ? SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: _fg)) : Icon(Icons.save),
               label: Text(_loading ? 'Saving...' : 'Save Links'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
@@ -1103,13 +1115,13 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
         children: [
           _buildSectionTitle('Active Sessions'),
           const SizedBox(height: 8),
-          Text('Manage your active sessions across devices', style: TextStyle(color: Colors.white.withValues(alpha: 0.6), fontSize: 13)),
+          Text('Manage your active sessions across devices', style: TextStyle(color: _fgSub, fontSize: 13)),
           const SizedBox(height: 16),
           if (_sessions.isEmpty)
             Center(
               child: Padding(
                 padding: const EdgeInsets.all(32),
-                child: Text('No active sessions', style: TextStyle(color: Colors.white.withValues(alpha: 0.5))),
+                child: Text('No active sessions', style: TextStyle(color: _fgMid)),
               ),
             )
           else
@@ -1132,18 +1144,18 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: isCurrent ? Colors.blue.withValues(alpha: 0.1) : Colors.white.withValues(alpha: 0.03),
+        color: isCurrent ? Colors.blue.withValues(alpha: 0.1) : _cardBg2,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: isCurrent ? Colors.blueAccent.withValues(alpha: 0.5) : Colors.white.withValues(alpha: 0.08),
+          color: isCurrent ? Colors.blueAccent.withValues(alpha: 0.5) : _border,
         ),
       ),
       child: Row(
         children: [
           if (country != '_U')
-            Image.network('https://flagsapi.com/$country/flat/32.png', width: 24, height: 24, errorBuilder: (_, __, ___) => const Icon(Icons.public, color: Colors.white54))
+            Image.network('https://flagsapi.com/$country/flat/32.png', width: 24, height: 24, errorBuilder: (_, __, ___) => Icon(Icons.public, color: _fgMid))
           else
-            const Icon(Icons.public, color: Colors.white54),
+            Icon(Icons.public, color: _fgMid),
           const SizedBox(width: 12),
           Expanded(
             child: Column(
@@ -1151,7 +1163,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
               children: [
                 Row(
                   children: [
-                    Text(ip, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                    Text(ip, style: TextStyle(color: _fg, fontWeight: FontWeight.w600)),
                     if (isCurrent) ...[
                       const SizedBox(width: 8),
                       Container(
@@ -1160,14 +1172,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
                           color: Colors.blueAccent,
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: const Text('YOU', style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
+                        child: Text('YOU', style: TextStyle(color: _fg, fontSize: 10, fontWeight: FontWeight.bold)),
                       ),
                     ],
                   ],
                 ),
                 const SizedBox(height: 4),
-                Text('$platform • $os • $browser', style: TextStyle(color: Colors.white.withValues(alpha: 0.6), fontSize: 12)),
-                Text('Last seen: $lastSeen', style: TextStyle(color: Colors.white.withValues(alpha: 0.5), fontSize: 11)),
+                Text('$platform • $os • $browser', style: TextStyle(color: _fgSub, fontSize: 12)),
+                Text('Last seen: $lastSeen', style: TextStyle(color: _fgMid, fontSize: 11)),
               ],
             ),
           ),
@@ -1207,7 +1219,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
                 const SizedBox(height: 12),
                 Text(
                   'Are you sure you want to delete your account? This will remove all of your purchases, uploads, etc. Everything will be removed.',
-                  style: TextStyle(color: Colors.white.withValues(alpha: 0.7), fontSize: 14),
+                  style: TextStyle(color: _fgSub, fontSize: 14),
                 ),
               ],
             ),
@@ -1216,19 +1228,19 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
           _buildTextField(controller: _deletePassCtrl, label: 'Password', hint: 'Enter your password', icon: Icons.lock_outline, obscure: true),
           const SizedBox(height: 16),
           CheckboxListTile(
-            title: const Text('I understand this action is permanent', style: TextStyle(color: Colors.white)),
-            subtitle: const Text('All data will be permanently deleted', style: TextStyle(color: Colors.white70, fontSize: 12)),
+            title: Text('I understand this action is permanent', style: TextStyle(color: _fg)),
+            subtitle: Text('All data will be permanently deleted', style: TextStyle(color: _fgSub, fontSize: 12)),
             value: _deleteConfirmed,
             onChanged: (v) => setState(() => _deleteConfirmed = v ?? false),
             activeColor: Colors.redAccent,
-            checkColor: Colors.white,
+            checkColor: _fg,
           ),
           const SizedBox(height: 32),
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
               onPressed: (_loading || !_deleteConfirmed) ? null : _submitDelete,
-              icon: _loading ? const SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Icon(Icons.delete_forever),
+              icon: _loading ? SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: _fg)) : Icon(Icons.delete_forever),
               label: Text(_loading ? 'Deleting...' : 'Delete Account Permanently'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
@@ -1248,18 +1260,18 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
         height: 150,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.08),
+          color: _border,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
+          border: Border.all(color: _border),
           image: _getCoverImage(),
         ),
         child: _newCover == null && _currentCover == null
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.image_outlined, size: 40, color: Colors.white.withValues(alpha: 0.5)),
+                  Icon(Icons.image_outlined, size: 40, color: _fg.withValues(alpha: 0.5)),
                   const SizedBox(height: 8),
-                  Text('Tap to add cover photo', style: TextStyle(color: Colors.white.withValues(alpha: 0.6))),
+                  Text('Tap to add cover photo', style: TextStyle(color: _fg.withValues(alpha: 0.6))),
                 ],
               )
             : Align(
@@ -1274,9 +1286,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.edit, size: 16, color: Colors.white.withValues(alpha: 0.9)),
+                      const Icon(Icons.edit, size: 16, color: Colors.white),
                       const SizedBox(width: 4),
-                      Text('Change', style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 12)),
+                      const Text('Change', style: TextStyle(color: Colors.white, fontSize: 12)),
                     ],
                   ),
                 ),
@@ -1306,11 +1318,11 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
             decoration: BoxDecoration(
               color: Colors.blueAccent.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(60),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.2), width: 3),
+              border: Border.all(color: _border, width: 3),
               image: _getAvatarImage(),
             ),
             child: _newAvatar == null && _currentAvatar == null
-                ? Icon(Icons.person, size: 50, color: Colors.white.withValues(alpha: 0.6))
+                ? Icon(Icons.person, size: 50, color: _fgSub)
                 : null,
           ),
           Positioned(
@@ -1321,7 +1333,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: Colors.black, width: 2),
+                border: Border.all(color: _bg, width: 2),
               ),
               child: const Icon(Icons.camera_alt, size: 18, color: Colors.white),
             ),
@@ -1344,7 +1356,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
   Widget _buildSectionTitle(String title) {
     return Text(
       title,
-      style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+      style: TextStyle(color: _fg, fontSize: 18, fontWeight: FontWeight.bold),
     );
   }
 
@@ -1357,7 +1369,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
           children: [
             Icon(Icons.error_outline, size: 48, color: Colors.redAccent.withValues(alpha: 0.8)),
             const SizedBox(height: 16),
-            Text(_error!, style: TextStyle(color: Colors.white.withValues(alpha: 0.8))),
+            Text(_error!, style: TextStyle(color: _fg.withValues(alpha: 0.8))),
             const SizedBox(height: 20),
             OutlinedButton(onPressed: () => _loadTab(_activeTab), child: const Text('Retry')),
           ],
@@ -1380,18 +1392,18 @@ class _EditProfileScreenState extends State<EditProfileScreen> with SingleTicker
       enabled: enabled,
       obscureText: obscure,
       maxLines: maxLines,
-      style: TextStyle(color: enabled ? Colors.white : Colors.white.withValues(alpha: 0.5)),
+      style: TextStyle(color: enabled ? _fg : _fgMid),
       decoration: InputDecoration(
         labelText: label,
         hintText: hint,
-        labelStyle: TextStyle(color: Colors.white.withValues(alpha: 0.7)),
-        hintStyle: TextStyle(color: Colors.white.withValues(alpha: 0.4)),
-        prefixIcon: Icon(icon, color: Colors.white.withValues(alpha: 0.6)),
+        labelStyle: TextStyle(color: _fgSub),
+        hintStyle: TextStyle(color: _fg.withValues(alpha: 0.4)),
+        prefixIcon: Icon(icon, color: _fgSub),
         filled: true,
-        fillColor: Colors.white.withValues(alpha: enabled ? 0.08 : 0.04),
+        fillColor: _fg.withValues(alpha: enabled ? 0.08 : 0.04),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
-        enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withValues(alpha: 0.1))),
-        disabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.white.withValues(alpha: 0.05))),
+        enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: _border)),
+        disabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: _cardBg)),
       ),
     );
   }

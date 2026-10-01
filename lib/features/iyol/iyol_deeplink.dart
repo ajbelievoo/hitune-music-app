@@ -53,6 +53,10 @@ class IyolDeepLink {
   static Future<bool> openApp() =>
       _open(Uri(scheme: 'iyolme', host: 'home'));
 
+  /// Open IyolMe's story camera ("Your story" from the stories rail).
+  static Future<bool> openStoryCreate() =>
+      _open(Uri(scheme: 'iyolme', host: 'story', path: '/create'));
+
   static Future<bool> _open(Uri deepLink) async {
     try {
       final ok = await launchUrl(deepLink, mode: LaunchMode.externalApplication);
