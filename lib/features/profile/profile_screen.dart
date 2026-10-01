@@ -27,6 +27,7 @@ import '../other_projects/other_projects_screen.dart';
 import '../subscription/subscription_service.dart';
 import '../developer/developer_screen.dart';
 import '../developer/developer_service.dart';
+import '../iyol/iyol_deeplink.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -498,6 +499,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             mode: LaunchMode.externalApplication)),
                           _MenuItem(Icons.workspace_premium, 'Upgrade Plans', _brandGold, () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const UpgradePlansScreen()))),
                           _MenuItem(Icons.devices_outlined, 'Sessions', _brandCyan, () => SessionsScreen.openWithAuth(context)),
+                          _MenuItem(Icons.video_library_outlined, 'IyolMe Reels', _brandPink, () => IyolDeepLink.openApp()),
                           _MenuItem(Icons.apps_outage, 'Other Apps', _brandPink, () {
                             Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OtherProjectsScreen()));
                           }),

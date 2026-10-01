@@ -49,6 +49,10 @@ class IyolDeepLink {
     return _open(story(storyId));
   }
 
+  /// Open the IyolMe app home (falls back to the store listing).
+  static Future<bool> openApp() =>
+      _open(Uri(scheme: 'iyolme', host: 'home'));
+
   static Future<bool> _open(Uri deepLink) async {
     try {
       final ok = await launchUrl(deepLink, mode: LaunchMode.externalApplication);

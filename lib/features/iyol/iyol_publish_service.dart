@@ -67,7 +67,8 @@ class IyolPublishService {
       }
       final iyol = pub.data!['iyol'];
       final reelUrl = iyol is Map ? (iyol['reel_url'] ?? iyol['url'])?.toString() : null;
-      return IyolPublishResult.ok(reelUrl);
+      final username = iyol is Map ? iyol['username']?.toString() : null;
+      return IyolPublishResult.ok(reelUrl, username: username);
     } catch (e) {
       AppLogger.d('iyol publish failed: $e');
       return IyolPublishResult.fail('exception');
@@ -78,11 +79,13 @@ class IyolPublishService {
 class IyolPublishResult {
   final bool success;
   final String? reelUrl;
+  final String? username;
   final String? error;
-  const IyolPublishResult.ok(this.reelUrl)
+  const IyolPublishResult.ok(this.reelUrl, {this.username})
       : success = true,
         error = null;
   const IyolPublishResult.fail(this.error)
       : success = false,
-        reelUrl = null;
+        reelUrl = null,
+        username = null;
 }

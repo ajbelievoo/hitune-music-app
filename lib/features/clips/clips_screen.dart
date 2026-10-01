@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../core/network/api_service.dart';
@@ -229,18 +230,33 @@ class _ClipsScreenState extends State<ClipsScreen> {
 
   Future<void> _publishReel(_ClipItem item) async {
     final messenger = ScaffoldMessenger.of(context);
-    messenger.showSnackBar(const SnackBar(content: Text('Rendering reel clip...')));
+    messenger.showSnackBar(const SnackBar(
+        content: Text('Rendering reel, then publishing to your IyolMe account...')));
     final res = await IyolPublishService.instance.publishTrack(
       item.track,
       start: item.start,
       duration: item.duration,
     );
     if (!mounted) return;
-    messenger.showSnackBar(SnackBar(
-      content: Text(res.success
-          ? 'Published as reel on IyolMe'
-          : 'Publish failed: ${res.error}'),
-    ));
+    if (res.success) {
+      messenger.showSnackBar(SnackBar(
+        duration: const Duration(seconds: 8),
+        content: Text(res.reelUrl != null && res.reelUrl!.isNotEmpty
+            ? 'Reel live on IyolMe${res.username != null ? ' as @${res.username}' : ''}: ${res.reelUrl}'
+            : 'Published as a reel on your IyolMe account'),
+        action: (res.reelUrl != null && res.reelUrl!.isNotEmpty)
+            ? SnackBarAction(
+                label: 'Open',
+                onPressed: () =>
+                    launchUrl(Uri.parse(res.reelUrl!),
+                        mode: LaunchMode.externalApplication),
+              )
+            : null,
+      ));
+    } else {
+      messenger.showSnackBar(
+          SnackBar(content: Text('Publish failed: ${res.error}')));
+    }
   }
 
   void _openFull(_ClipItem item) {
