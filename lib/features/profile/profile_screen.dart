@@ -293,6 +293,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
         builder: (context, snapshot) {
           final isLoggedIn = _hasSession;
 
+          // Session state isn't known until _load() resolves the SecureStore
+          // reads — showing the guest view before that flashes "Sign In" to
+          // logged-in users for a moment.
+          if (snapshot.connectionState != ConnectionState.done &&
+              !isLoggedIn) {
+            return const Center(child: CircularProgressIndicator());
+          }
+
           return RefreshIndicator(
             onRefresh: () async {
               setState(() {

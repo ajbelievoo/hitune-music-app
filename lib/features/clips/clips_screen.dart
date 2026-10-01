@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
 import '../../core/network/api_service.dart';
 import '../../core/ui/ai_badge.dart';
@@ -34,6 +35,7 @@ class _ClipsScreenState extends State<ClipsScreen> {
   String? _error;
   int _current = 0;
   StreamSubscription<Duration>? _posSub;
+  StreamSubscription<ProcessingState>? _readySub;
 
   @override
   void initState() {
@@ -44,6 +46,7 @@ class _ClipsScreenState extends State<ClipsScreen> {
   @override
   void dispose() {
     _posSub?.cancel();
+    _readySub?.cancel();
     _pageCtrl.dispose();
     super.dispose();
   }
@@ -83,20 +86,38 @@ class _ClipsScreenState extends State<ClipsScreen> {
     if (_items.isNotEmpty && _current == 0) _playAt(0);
   }
 
-  void _playAt(int index) {
+  Future<void> _playAt(int index) async {
     if (index < 0 || index >= _items.length) return;
     final item = _items[index];
-    PlayerService.instance.playTrack(item.track);
     _posSub?.cancel();
+    _readySub?.cancel();
+    try {
+      await PlayerService.instance.playTrack(item.track);
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Clip could not be played')));
+      }
+      return;
+    }
+    if (!mounted) return;
+    // Seek into the clip window only after the source is actually loaded —
+    // seeking before setAudioSource completes is silently dropped.
+    var seeked = false;
+    _readySub = PlayerService.instance.audioPlayer.processingStateStream
+        .listen((st) {
+      if (st == ProcessingState.ready && !seeked) {
+        seeked = true;
+        PlayerService.instance.audioPlayer
+            .seek(Duration(seconds: item.start));
+      }
+    });
     _posSub = PlayerService.instance.positionStream.listen((pos) {
-      // loop the clip window
       final end = item.start + item.duration;
       if (pos.inSeconds >= end) {
         PlayerService.instance.audioPlayer.seek(Duration(seconds: item.start));
       }
     });
-    // seek to the clip start once the source is ready
-    PlayerService.instance.audioPlayer.seek(Duration(seconds: item.start));
   }
 
   Future<void> _publishReel(_ClipItem item) async {
@@ -117,6 +138,7 @@ class _ClipsScreenState extends State<ClipsScreen> {
 
   void _openFull(_ClipItem item) {
     _posSub?.cancel();
+    _readySub?.cancel();
     PlayerService.instance.playTrack(item.track);
     PlayerService.instance.audioPlayer.seek(Duration.zero);
     Navigator.of(context).maybePop();
@@ -151,6 +173,7 @@ class _ClipsScreenState extends State<ClipsScreen> {
                     return _ClipCard(
                       item: item,
                       active: i == _current,
+                      onPlayClip: () => _playAt(i),
                       onOpenFull: () => _openFull(item),
                       onPublishReel: () => _publishReel(item),
                     );
@@ -198,12 +221,14 @@ class _ClipCard extends StatelessWidget {
   final bool active;
   final VoidCallback onOpenFull;
   final VoidCallback onPublishReel;
+  final VoidCallback onPlayClip;
 
   const _ClipCard({
     required this.item,
     required this.active,
     required this.onOpenFull,
     required this.onPublishReel,
+    required this.onPlayClip,
   });
 
   @override
@@ -266,6 +291,12 @@ class _ClipCard extends StatelessWidget {
             children: [
               IconButton(
                 icon: const Icon(Icons.play_circle_fill, color: Colors.white, size: 34),
+                tooltip: 'Play clip',
+                onPressed: onPlayClip,
+              ),
+              const SizedBox(height: 8),
+              IconButton(
+                icon: const Icon(Icons.open_in_full, color: Colors.white, size: 26),
                 tooltip: 'Open full song',
                 onPressed: onOpenFull,
               ),
