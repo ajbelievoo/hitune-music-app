@@ -131,10 +131,12 @@ class _ClipsScreenState extends State<ClipsScreen> {
         }
       });
       // just_audio is the audio clock — mute the surface so a muxed
-      // stream's own track never double-plays.
+      // stream's own track never double-plays. Seek video to the window
+      // start + however far the clipped audio already got (late init).
       await vc.setVolume(0);
-      await vc.seekTo(Duration(seconds: _videoWinStart));
-      await vc.play();
+      await vc.seekTo(Duration(seconds: _videoWinStart) +
+          _clipPlayer.position);
+      if (_clipPlayer.playing) await vc.play();
       _clipVideo = vc;
       _clipVideoReady = true;
       if (mounted) setState(() {});

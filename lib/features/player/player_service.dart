@@ -1281,7 +1281,7 @@ class PlayerService {
   /// resolution + header/caching pipeline as the main queue so signed and
   /// CDN-gated URLs (googlevideo etc.) play correctly on a standalone
   /// AudioPlayer.
-  Future<ClippingAudioSource?> clipSourceFor(
+  Future<AudioSource?> clipSourceFor(
     Track t, {
     required int startSec,
     required int durationSec,
@@ -1289,8 +1289,14 @@ class PlayerService {
     try {
       final url = await _resolvePlayableUrl(t, preferred: _quality)
           .timeout(const Duration(seconds: 15));
+      final uri = Uri.parse(url);
+      // Plain UriAudioSource — LockCachingAudioSource is a StreamAudioSource
+      // and cannot be wrapped by ClippingAudioSource.
+      final base = AudioSource.uri(uri, headers: _sourceHeaders(uri));
+      // HLS playlists can't be windowed by ClippingAudioSource.
+      if (url.contains('.m3u8')) return base;
       return ClippingAudioSource(
-        child: _toSource(t, url) as UriAudioSource,
+        child: base,
         start: Duration(seconds: startSec),
         end: Duration(seconds: startSec + durationSec),
       );
@@ -1535,17 +1541,11 @@ class PlayerService {
     await _player.stop();
   }
 
-  AudioSource _toSource(Track t, String resolvedUrl) {
-    // ignore: avoid_print
-    AppLogger.d('[PlayerService] _toSource: track=${t.title} url=$resolvedUrl');
-    // ignore: avoid_print
-    AppLogger.d('[PlayerService] _toSource: isHLS=${resolvedUrl.contains('.m3u8') || resolvedUrl.contains('.ts') || resolvedUrl.contains('HLS')}');
-    final cover = t.coverUrl;
-    final uri = Uri.parse(resolvedUrl);
-    // googlevideo rejects ExoPlayer's default UA with 403 — send the same
-    // YouTube-app headers the manifest was fetched with.
+  /// googlevideo rejects ExoPlayer's default UA with 403 — send the same
+  /// YouTube-app headers the manifest was fetched with.
+  Map<String, String>? _sourceHeaders(Uri uri) {
     final host = uri.host;
-    final headers = (host.contains('googlevideo') ||
+    return (host.contains('googlevideo') ||
             host.endsWith('youtube.com') ||
             host.endsWith('youtu.be'))
         ? const {
@@ -1554,6 +1554,16 @@ class PlayerService {
             'Referer': 'https://www.youtube.com/',
           }
         : null;
+  }
+
+  AudioSource _toSource(Track t, String resolvedUrl) {
+    // ignore: avoid_print
+    AppLogger.d('[PlayerService] _toSource: track=${t.title} url=$resolvedUrl');
+    // ignore: avoid_print
+    AppLogger.d('[PlayerService] _toSource: isHLS=${resolvedUrl.contains('.m3u8') || resolvedUrl.contains('.ts') || resolvedUrl.contains('HLS')}');
+    final cover = t.coverUrl;
+    final uri = Uri.parse(resolvedUrl);
+    final headers = _sourceHeaders(uri);
     final tag = MediaItem(
       id: t.id,
       title: t.title,
