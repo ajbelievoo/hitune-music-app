@@ -44,7 +44,7 @@ class _SearchResult {
     if (type == 'm_track') return kind == 'track';
     if (type == 'm_artist') return kind == 'artist';
     if (type == 'm_playlist') {
-      return ot == 'm_playlist' || ot == 'u_playlist' || ot == 'playlist';
+      return ot == 'm_playlist' || ot == 'u_playlist' || ot == 'playlist' || ot == 'ugc_playlist';
     }
     return ot == type;
   }
