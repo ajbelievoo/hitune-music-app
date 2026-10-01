@@ -1290,7 +1290,7 @@ class PlayerService {
       final url = await _resolvePlayableUrl(t, preferred: _quality)
           .timeout(const Duration(seconds: 15));
       return ClippingAudioSource(
-        child: _toSource(t, url),
+        child: _toSource(t, url) as UriAudioSource,
         start: Duration(seconds: startSec),
         end: Duration(seconds: startSec + durationSec),
       );
