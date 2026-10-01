@@ -57,7 +57,7 @@ dependencies:
   file_picker: ^8.1.2
   path_provider: ^2.1.5
   youtube_explode_dart: 3.0.5
-  flutter_cache_manager: ^3.4.5
+  flutter_cache_manager: 3.4.1  # pinned: 3.4.2+ requires Dart 3.8, app runs Flutter 3.29.3 (Dart 3.7)
   connectivity_plus: ^7.3.1
 
 dev_dependencies:
